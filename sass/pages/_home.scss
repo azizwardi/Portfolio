@@ -1,51 +1,9 @@
 @use '../abstracts/variables' as vars;
 @use '../abstracts/mixins' as mixins;
 
-.home-hero {
-  color: #fff;
-  background: linear-gradient(
-      to right,
-      rgba($themeClrPrimary, 0.8),
-      rgba($themeClrPrimary, 0.8)
-    ),
-    url(../../assets/svg/common-bg.svg);
-  background-position: center;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
 
-  height: 100vh;
-
-  min-height: 80rem;
-  max-height: 120rem;
-  position: relative;
-
-  @include respond(phone) {
-    height: unset;
-    min-height: unset;
-  }
-  @include mixins.respond(phone) {
-    height: unset;
-    min-height: unset;
-  }
-  }
-
-  &__socials {
-    position: absolute;
-    top: 50%;
-    border: 2px solid #eee;
-    border-left: 2px solid #eee;
-    transform: translateY(-50%);
-    @include respond(tab-port) {
-      display: none;
-    }
-    @include mixins.respond(tab-port) {
-      display: none;
-    }
-    }
-  }
-  &__mouse-scroll-cont {
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translateX(-50%);
 .home-hero {
   color: #fff;
   background: linear-gradient(
