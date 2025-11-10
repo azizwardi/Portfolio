@@ -1,4 +1,5 @@
 @use './mixins' as mixins;
+@use './variables' as vars;
 
 .heading-primary {
   font-size: 6rem;
@@ -47,10 +48,10 @@
       top: calc(100% + 1.5rem);
       height: 5px;
       width: 3rem;
-      background: $themeClrPrimary;
+  background: vars.$themeClrPrimary;
       left: 50%;
       transform: translateX(-50%);
-      border-radius: $commonBorderRadius;
+  border-radius: vars.$commonBorderRadius;
 
       @include mixins.respond(phone) {
         top: calc(100% + 1.2rem);
@@ -97,7 +98,7 @@
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
-  border-radius: $commonBorderRadius;
+  border-radius: vars.$commonBorderRadius;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform .3s;
 
@@ -115,13 +116,13 @@
   }
 
   &--theme {
-    background: $themeClrPrimary;
+  background: vars.$themeClrPrimary;
     color: #fff;
   }
   &--theme-inv {
-    color: $themeClrPrimary;
+  color: vars.$themeClrPrimary;
     background: #fff;
-    border: 2px solid $themeClrPrimary;
+  border: 2px solid vars.$themeClrPrimary;
     box-shadow: none;
     padding: calc(1.5rem - 2px) calc(5rem - 2px);
   }
