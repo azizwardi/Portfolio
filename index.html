@@ -17,6 +17,86 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Contact notification popup (toast) */
+      .contact-popup {
+        position: fixed;
+        right: 1.6rem;
+        bottom: 1.6rem;
+        min-width: 280px;
+        max-width: calc(100% - 3.2rem);
+        background: linear-gradient(180deg, rgba(17,24,39,0.98), rgba(8,10,15,0.98));
+        color: #fff;
+        padding: 1rem 1.2rem;
+        border-radius: 12px;
+        box-shadow: 0 12px 36px rgba(2,6,23,0.6);
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        transform: translateY(18px) scale(0.995);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform .28s cubic-bezier(.2,.9,.3,1), opacity .28s, box-shadow .2s;
+        z-index: 9999;
+      }
+      .contact-popup--show {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .contact-popup__icon {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        display: inline-grid;
+        place-items: center;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.06);
+        font-weight: 700;
+        font-size: 1.15rem;
+      }
+      .contact-popup__msg {
+        font-size: 1.05rem;
+        line-height: 1.25;
+        color: #f1f5f9;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .contact-popup__sub {
+        display: block;
+        font-size: 0.92rem;
+        font-weight: 400;
+        color: rgba(241,245,249,0.85);
+        margin-top: 0.15rem;
+      }
+      .contact-popup--success { background: linear-gradient(90deg,#065f46,#0f766e); }
+      .contact-popup--error { background: linear-gradient(90deg,#7f1d1d,#991b1b); }
+      .contact-popup__close {
+        margin-left: auto;
+        background: rgba(255,255,255,0.04);
+        border: none;
+        color: rgba(255,255,255,0.95);
+        cursor: pointer;
+        font-size: 1.25rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: inline-grid;
+        place-items: center;
+        transition: transform .12s, background-color .12s, box-shadow .12s;
+      }
+      .contact-popup__close:hover {
+        transform: translateY(-1px) scale(1.02);
+        background: rgba(255,255,255,0.08);
+        box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+      }
+      @media (max-width: 520px) {
+        .contact-popup { right: 1rem; left: 1rem; bottom: 1rem; min-width: auto; }
+        .contact-popup__msg { font-size: 1rem; }
+        .contact-popup__icon { width: 40px; height: 40px; }
+        .contact-popup__close { width: 36px; height: 36px; font-size: 1.05rem; }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -370,7 +450,6 @@ partenariats.
               Submit
             </button>
           </form>
-          <div id="contact-status" aria-live="polite" style="margin-top:12px;color:#cbd5e1"></div>
         </div>
       </div>
     </section>
@@ -438,62 +517,12 @@ partenariats.
       </div>
     </footer>
 
+    <!-- Contact popup toast markup -->
+    <div id="contact-popup" class="contact-popup" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <div class="contact-popup__icon" id="contact-popup-icon">✓</div>
+      <div class="contact-popup__msg" id="contact-popup-msg">Message sent</div>
+      <button id="contact-popup-close" class="contact-popup__close" aria-label="Dismiss">✕</button>
+    </div>
     <script src="./index.js"></script>
-    <script>
-      // Client-side handler for contact form to POST to Vercel serverless function /api/contact
-      (function(){
-        const form = document.getElementById('contactForm');
-        const statusEl = document.getElementById('contact-status');
-        const submitBtn = document.getElementById('contactSubmit');
-
-        if(!form) return;
-
-        form.addEventListener('submit', async function(e){
-          e.preventDefault();
-          statusEl.textContent = '';
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Sending...';
-
-          const data = {
-            name: form.name.value.trim(),
-            email: form.email.value.trim(),
-            message: form.message.value.trim(),
-            _gotcha: form._gotcha.value || ''
-          };
-
-          // basic client validation
-          if(!data.name || !data.email || !data.message){
-            statusEl.textContent = 'Please fill all required fields.';
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit';
-            return;
-          }
-
-          try{
-            const res = await fetch('/api/contact', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(data)
-            });
-            const json = await res.json();
-            if(res.ok){
-              statusEl.style.color = '#86efac';
-              statusEl.textContent = 'Thanks — your message was sent.';
-              form.reset();
-            }else{
-              statusEl.style.color = '#fecaca';
-              statusEl.textContent = json && json.error ? json.error : 'Failed to send message.';
-            }
-          }catch(err){
-            console.error(err);
-            statusEl.style.color = '#fecaca';
-            statusEl.textContent = 'Network error. Please try again later.';
-          }finally{
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit';
-          }
-        });
-      }());
-    </script>
   </body>
 </html>

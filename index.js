@@ -45,10 +45,48 @@ headerLogoConatiner.addEventListener('click', () => {
 
   if (!form) return
 
+  // Enhanced status: inline element (legacy) + floating toast popup
+  let popupTimer = null
+  const popup = document.getElementById('contact-popup')
+  const popupMsg = popup ? document.getElementById('contact-popup-msg') : null
+  const popupIcon = popup ? document.getElementById('contact-popup-icon') : null
+  const popupClose = popup ? document.getElementById('contact-popup-close') : null
+
+  function hidePopup() {
+    if (!popup) return
+    popup.classList.remove('contact-popup--show', 'contact-popup--success', 'contact-popup--error')
+    popup.setAttribute('hidden', '')
+    if (popupTimer) {
+      clearTimeout(popupTimer)
+      popupTimer = null
+    }
+  }
+
+  if (popupClose) {
+    popupClose.addEventListener('click', hidePopup)
+  }
+
   function showStatus(message, isError) {
-    if (!statusEl) return
-    statusEl.textContent = message
-    statusEl.style.color = isError ? '#ff6b6b' : '#9ae6b4'
+    // legacy inline status element
+    if (statusEl) {
+      statusEl.textContent = message
+      statusEl.style.color = isError ? '#ff6b6b' : '#9ae6b4'
+    }
+
+    // popup toast
+    if (!popup || !popupMsg) return
+    popupMsg.textContent = message
+    // icon
+    if (popupIcon) popupIcon.textContent = isError ? '!' : '✓'
+    popup.classList.remove('contact-popup--success', 'contact-popup--error')
+    popup.classList.add(isError ? 'contact-popup--error' : 'contact-popup--success')
+    popup.removeAttribute('hidden')
+    // trigger show (with transition)
+    window.requestAnimationFrame(() => popup.classList.add('contact-popup--show'))
+
+    // auto-hide after 5s
+    if (popupTimer) clearTimeout(popupTimer)
+    popupTimer = setTimeout(() => hidePopup(), 5000)
   }
 
   form.addEventListener('submit', async (e) => {
