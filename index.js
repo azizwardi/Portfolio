@@ -36,3 +36,75 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+// Contact form handling
+;(function () {
+  const form = document.getElementById('contactForm')
+  const statusEl = document.getElementById('contact-status')
+  const submitBtn = document.getElementById('contactSubmit')
+
+  if (!form) return
+
+  function showStatus(message, isError) {
+    if (!statusEl) return
+    statusEl.textContent = message
+    statusEl.style.color = isError ? '#ff6b6b' : '#9ae6b4'
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    // simple client-side validation
+    const name = form.querySelector('[name="name"]').value.trim()
+    const email = form.querySelector('[name="email"]').value.trim()
+    const message = form.querySelector('[name="message"]').value.trim()
+    const gotcha = form.querySelector('[name="_gotcha"]').value || ''
+
+    if (!name || !email || !message) {
+      showStatus('Please fill in all required fields.', true)
+      return
+    }
+
+    // disable while sending
+    submitBtn.disabled = true
+    submitBtn.textContent = 'Sending...'
+    showStatus('Sending message...', false)
+
+    try {
+      // Determine endpoint: meta tag > /api/contact
+      const meta = document.querySelector('meta[name="contact-endpoint"]')
+      const endpoint = meta && meta.content ? meta.content.trim() : '/api/contact'
+
+      const headers = { 'Content-Type': 'application/json' }
+      // For external form endpoints (Formspree) include Accept header to get JSON response
+      if (/^https?:\/\//.test(endpoint)) headers['Accept'] = 'application/json'
+
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ name, email, message, _gotcha: gotcha })
+      })
+
+      // Try to parse JSON safely
+      let data = {}
+      try { data = await res.json() } catch (e) { /* ignore parse errors */ }
+
+      // Formspree returns 200 OK with { ok: true } on success, or 422/400 with errors
+      if (res.ok && (data.ok === true || res.status === 200)) {
+        showStatus('Message sent — thank you!', false)
+        form.reset()
+      } else if (data && (data.error || data.errors)) {
+        const err = data.error || (Array.isArray(data.errors) ? data.errors.map(x=>x.message||x).join(', ') : JSON.stringify(data.errors))
+        showStatus(err, true)
+      } else {
+        showStatus('Failed to send message. Try again later.', true)
+      }
+    } catch (err) {
+      console.error('Contact form error', err)
+      showStatus('Network error. Check your connection.', true)
+    } finally {
+      submitBtn.disabled = false
+      submitBtn.textContent = 'Submit'
+    }
+  })
+})()
