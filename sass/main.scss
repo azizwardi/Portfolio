@@ -2,17 +2,17 @@
 @import 'abstracts/mixins';
 
 
-@use 'base/base';
+@import 'base/base';
 
-@use 'abstracts/utilities';
+@import 'abstracts/utilities';
 
-@use 'pages/home';
-@use 'pages/project-case-study';
+@import 'pages/home';
+@import 'pages/project-case-study';
 
-@use 'components/header';
-@use 'components/footer';
-@use 'components/skills';
-@use 'components/mouse-scroll';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/skills';
+@import 'components/mouse-scroll';
 
 
 
