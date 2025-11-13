@@ -21,22 +21,22 @@
       /* Contact notification popup (toast) */
       .contact-popup {
         position: fixed;
-        right: 1.6rem;
-        bottom: 1.6rem;
-        min-width: 280px;
-        max-width: calc(100% - 3.2rem);
+        right: 1.2rem;
+        bottom: 1.2rem;
+        min-width: 220px;
+        max-width: calc(100% - 2.4rem);
         background: linear-gradient(180deg, rgba(17,24,39,0.98), rgba(8,10,15,0.98));
         color: #fff;
-        padding: 1rem 1.2rem;
-        border-radius: 12px;
-        box-shadow: 0 12px 36px rgba(2,6,23,0.6);
+        padding: 0.6rem 0.9rem; /* smaller padding */
+        border-radius: 10px;
+        box-shadow: 0 10px 26px rgba(2,6,23,0.5);
         display: flex;
-        gap: 1rem;
+        gap: 0.75rem;
         align-items: center;
-        transform: translateY(18px) scale(0.995);
+        transform: translateY(14px) scale(0.995);
         opacity: 0;
         pointer-events: none;
-        transition: transform .28s cubic-bezier(.2,.9,.3,1), opacity .28s, box-shadow .2s;
+        transition: transform .24s cubic-bezier(.2,.9,.3,1), opacity .24s, box-shadow .16s;
         z-index: 9999;
       }
       .contact-popup--show {
@@ -45,29 +45,29 @@
         pointer-events: auto;
       }
       .contact-popup__icon {
-        width: 44px;
-        height: 44px;
-        flex: 0 0 44px;
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
         display: inline-grid;
         place-items: center;
-        border-radius: 8px;
+        border-radius: 6px;
         background: rgba(255,255,255,0.06);
         font-weight: 700;
-        font-size: 1.15rem;
+        font-size: 0.95rem;
       }
       .contact-popup__msg {
-        font-size: 1.05rem;
-        line-height: 1.25;
+        font-size: 0.95rem;
+        line-height: 1.2;
         color: #f1f5f9;
         font-weight: 600;
         letter-spacing: -0.01em;
       }
       .contact-popup__sub {
         display: block;
-        font-size: 0.92rem;
+        font-size: 0.85rem;
         font-weight: 400;
         color: rgba(241,245,249,0.85);
-        margin-top: 0.15rem;
+        margin-top: 0.08rem;
       }
       .contact-popup--success { background: linear-gradient(90deg,#065f46,#0f766e); }
       .contact-popup--error { background: linear-gradient(90deg,#7f1d1d,#991b1b); }
@@ -77,10 +77,10 @@
         border: none;
         color: rgba(255,255,255,0.95);
         cursor: pointer;
-        font-size: 1.25rem;
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
+        font-size: 0.95rem;
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
         display: inline-grid;
         place-items: center;
         transition: transform .12s, background-color .12s, box-shadow .12s;
@@ -91,10 +91,10 @@
         box-shadow: 0 6px 18px rgba(2,6,23,0.45);
       }
       @media (max-width: 520px) {
-        .contact-popup { right: 1rem; left: 1rem; bottom: 1rem; min-width: auto; }
-        .contact-popup__msg { font-size: 1rem; }
-        .contact-popup__icon { width: 40px; height: 40px; }
-        .contact-popup__close { width: 36px; height: 36px; font-size: 1.05rem; }
+        .contact-popup { right: 0.75rem; left: 0.75rem; bottom: 0.75rem; min-width: auto; }
+        .contact-popup__msg { font-size: 0.95rem; }
+        .contact-popup__icon { width: 32px; height: 32px; }
+        .contact-popup__close { width: 30px; height: 30px; font-size: 0.9rem; }
       }
     </style>
   </head>
@@ -195,27 +195,7 @@
             />
           </a>
         </div>
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/yt-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="#"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/png/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
+        <!-- YouTube and Instagram removed -->
       </div>
       <div class="home-hero__mouse-scroll-cont">
         <div class="mouse"></div>
@@ -337,11 +317,10 @@
                 loading="lazy"
               />
               <h3 class="project-card__title">
-                EcoEvents – Gestion d’événements éco-responsables
+                EcoEvents — Eco-friendly Event Management
               </h3>
               <p class="project-card__desc">
-                Une plateforme collaborative avec back-office pour la gestion des événements, participants et
-partenariats.
+                A collaborative platform with a back-office for managing events, participants, and partnerships.
               </p>
               <a
                 href="https://github.com/siwar224/ecoevents/tree/Article-and-Comment"
@@ -475,27 +454,7 @@ partenariats.
                     alt="GitHub"
                   />
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://twitter.com/">
-                  <img
-                    class="main-footer__icon"
-                    src="./assets/png/twitter-ico.png"
-                    alt="Twitter"
-                  />
-                </a>
-                <a target="_blank" rel="noreferrer" href="#">
-                  <img
-                    class="main-footer__icon"
-                    src="./assets/png/yt-ico.png"
-                    alt="YouTube"
-                  />
-                </a>
-                <a target="_blank" rel="noreferrer" href="#">
-                  <img
-                    class="main-footer__icon main-footer__icon--mr-none"
-                    src="./assets/png/insta-ico.png"
-                    alt="Instagram"
-                  />
-                </a>
+                <!-- Twitter, YouTube and Instagram removed -->
             </div>
           </div>
           <div class="main-footer__row main-footer__row-2">
