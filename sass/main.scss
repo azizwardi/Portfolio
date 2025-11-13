@@ -1,18 +1,17 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@use 'abstracts/variables' as vars;
+@use 'abstracts/mixins' as mixins;
 
+@use 'base/base' as base;
 
-@import 'base/base';
+@use 'abstracts/utilities' as utils;
 
-@import 'abstracts/utilities';
+@use 'pages/home' as home;
+@use 'pages/project-case-study' as project;
 
-@import 'pages/home';
-@import 'pages/project-case-study';
-
-@import 'components/header';
-@import 'components/footer';
-@import 'components/skills';
-@import 'components/mouse-scroll';
+@use 'components/header' as header;
+@use 'components/footer' as footer;
+@use 'components/skills' as skills;
+@use 'components/mouse-scroll' as mouseScroll;
 
 
 

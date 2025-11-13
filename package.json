@@ -6,7 +6,7 @@
   "scripts": {
     "compile:scss": "sass sass/main.scss css/style.css",
     "watch:scss": "sass --watch sass/main.scss css/style.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
+  "prefix:css": "postcss css/style.css --use autoprefixer -o css/style.css",
   "compress:css": "sass css/style.css css/style.css --style=compressed",
     "build:css": "npm run compile:scss && npm run prefix:css && npm run compress:css",
     "build": "npm run build:css"
