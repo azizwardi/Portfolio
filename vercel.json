@@ -6,5 +6,5 @@
       "use": "@vercel/static-build"
     }
   ],
-  "outputDirectory": "."
+  "outputDirectory": "/dist"
 }
