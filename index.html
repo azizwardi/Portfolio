@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Portfolio</title>
-  <!-- Contact form endpoint (Formspree) -->
-  <meta name="contact-endpoint" content="https://formspree.io/f/mqawkzqr" />
+    <title>Portfolio</title>
+    <!-- Contact form endpoint (Formspree) -->
+    <meta name="contact-endpoint" content="https://formspree.io/f/mqawkzqr" />
     <meta name="description" content="Portfolio Template for Developer" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -25,18 +25,23 @@
         bottom: 1.2rem;
         min-width: 220px;
         max-width: calc(100% - 2.4rem);
-        background: linear-gradient(180deg, rgba(17,24,39,0.98), rgba(8,10,15,0.98));
+        background: linear-gradient(
+          180deg,
+          rgba(17, 24, 39, 0.98),
+          rgba(8, 10, 15, 0.98)
+        );
         color: #fff;
         padding: 0.6rem 0.9rem; /* smaller padding */
         border-radius: 10px;
-        box-shadow: 0 10px 26px rgba(2,6,23,0.5);
+        box-shadow: 0 10px 26px rgba(2, 6, 23, 0.5);
         display: flex;
         gap: 0.75rem;
         align-items: center;
         transform: translateY(14px) scale(0.995);
         opacity: 0;
         pointer-events: none;
-        transition: transform .24s cubic-bezier(.2,.9,.3,1), opacity .24s, box-shadow .16s;
+        transition: transform 0.24s cubic-bezier(0.2, 0.9, 0.3, 1),
+          opacity 0.24s, box-shadow 0.16s;
         z-index: 9999;
       }
       .contact-popup--show {
@@ -51,7 +56,7 @@
         display: inline-grid;
         place-items: center;
         border-radius: 6px;
-        background: rgba(255,255,255,0.06);
+        background: rgba(255, 255, 255, 0.06);
         font-weight: 700;
         font-size: 0.95rem;
       }
@@ -66,16 +71,20 @@
         display: block;
         font-size: 0.85rem;
         font-weight: 400;
-        color: rgba(241,245,249,0.85);
+        color: rgba(241, 245, 249, 0.85);
         margin-top: 0.08rem;
       }
-      .contact-popup--success { background: linear-gradient(90deg,#065f46,#0f766e); }
-      .contact-popup--error { background: linear-gradient(90deg,#7f1d1d,#991b1b); }
+      .contact-popup--success {
+        background: linear-gradient(90deg, #065f46, #0f766e);
+      }
+      .contact-popup--error {
+        background: linear-gradient(90deg, #7f1d1d, #991b1b);
+      }
       .contact-popup__close {
         margin-left: auto;
-        background: rgba(255,255,255,0.04);
+        background: rgba(255, 255, 255, 0.04);
         border: none;
-        color: rgba(255,255,255,0.95);
+        color: rgba(255, 255, 255, 0.95);
         cursor: pointer;
         font-size: 0.95rem;
         width: 32px;
@@ -83,18 +92,32 @@
         border-radius: 6px;
         display: inline-grid;
         place-items: center;
-        transition: transform .12s, background-color .12s, box-shadow .12s;
+        transition: transform 0.12s, background-color 0.12s, box-shadow 0.12s;
       }
       .contact-popup__close:hover {
         transform: translateY(-1px) scale(1.02);
-        background: rgba(255,255,255,0.08);
-        box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.45);
       }
       @media (max-width: 520px) {
-        .contact-popup { right: 0.75rem; left: 0.75rem; bottom: 0.75rem; min-width: auto; }
-        .contact-popup__msg { font-size: 0.95rem; }
-        .contact-popup__icon { width: 32px; height: 32px; }
-        .contact-popup__close { width: 30px; height: 30px; font-size: 0.9rem; }
+        .contact-popup {
+          right: 0.75rem;
+          left: 0.75rem;
+          bottom: 0.75rem;
+          min-width: auto;
+        }
+        .contact-popup__msg {
+          font-size: 0.95rem;
+        }
+        .contact-popup__icon {
+          width: 32px;
+          height: 32px;
+        }
+        .contact-popup__close {
+          width: 30px;
+          height: 30px;
+          font-size: 0.9rem;
+        }
       }
     </style>
   </head>
@@ -188,11 +211,13 @@
             class="home-hero__social-icon-link"
             target="_blank"
           >
-            <img
-              src="./assets/png/github-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
+                    <img
+                      src="./assets/png/github-ico.png"
+                      alt="GitHub"
+                      width="30"
+                      height="30"
+                      class="home-hero__social-icon"
+                    />
           </a>
         </div>
         <!-- YouTube and Instagram removed -->
@@ -283,14 +308,7 @@
                 users, featuring a chatbot and AI-powered recommendations.
                 Implemented CI/CD pipelines and monitoring with Grafana.
               </p>
-              <a
-                href="https://github.com/azizwardi/CodevisionPiweb"
-                target="_blank"
-                rel="noopener"
-                style="display:block;color:#1a73e8 !important;margin-top:8px;font-size:18px;"
-              >
-                View on GitHub
-              </a>
+              
 
               <div class="project-card__links">
                 <a
@@ -298,7 +316,7 @@
                   class="project-card__link"
                   target="_blank"
                 >
-                  <img src="./assets/png/github-ico.png" alt="GitHub" />
+                    <img src="./assets/png/github-ico.png" alt="GitHub" width="30" height="30" style="display:inline-block;opacity:1;" />
                 </a>
                 <a
                   href="./project-1.html"
@@ -319,28 +337,24 @@
               <h3 class="project-card__title">
                 EcoEvents — Eco-friendly Event Management
               </h3>
-                <p class="project-card__desc">
-                  EcoEvents is a collaborative web platform that helps organizers plan and run eco-friendly events.
-                  It provides a back-office for creating events, managing registrations and participants, and coordinating
-                  partnerships. The project also includes article/comment features for community engagement and tools
-                  to simplify event administration.
-                </p>
-              <a
-                href="https://github.com/siwar224/ecoevents/tree/Article-and-Comment"
-                target="_blank"
-                rel="noopener"
-                style="display:block;color:#1a73e8 !important;margin-top:8px;font-size:18px;"
-              >
-                View on GitHub
-              </a>
+              <p class="project-card__desc">
+                EcoEvents is a collaborative web platform that empowers
+                organizers to create and manage sustainable events. It brings
+                together tools for planning, participant engagement, and
+                partnership management—all with an eco-conscious approach.
+              </p>
+              
               <div class="project-card__links">
                 <a
                   href="https://github.com/siwar224/ecoevents/tree/Article-and-Comment"
                   class="project-card__link"
                   target="_blank"
                   rel="noopener"
+                  style="color:inherit;"
                 >
-                  <img src="./assets/png/github-ico.png" alt="GitHub" />
+                  <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg>
                 </a>
                 <a
                   href="./project-2.html"
@@ -353,24 +367,30 @@
             </div>
             <div class="project-card">
               <img
-                src="./assets/jpeg/project-mockup-example.jpeg"
+                src="./assets/project 3.png"
                 alt="Project 3"
                 class="project-card__img"
                 loading="lazy"
               />
-              <h3 class="project-card__title">Project 3</h3>
+              <h3 class="project-card__title">Full-Stack Delivery Framework</h3>
               <p class="project-card__desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                facilis tempora, explicabo quae quod deserunt eius sapiente
-                praesentium.
+                This DevOps-ready full-stack solution combines a Spring Boot
+                backend, Angular frontend, and MySQL database in Docker
+                containers with a Docker Compose stack. It integrates CI/CD
+                (Jenkins, Nexus), code-quality automation (SonarQube), and
+                monitoring tools (Prometheus, Grafana) for streamlined builds,
+                reliable deployments, and full visibility.
               </p>
               <div class="project-card__links">
                 <a
-                  href="./project-3.html"
+                  href="./assets/jpeg/project-mockup-example.jpeg"
                   class="project-card__link"
                   target="_blank"
+                  style="color:inherit;"
                 >
-                  <img src="./assets/png/github-ico.png" alt="GitHub" />
+                  <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg>
                 </a>
                 <a
                   href="./project-3.html"
@@ -427,8 +447,19 @@
               ></textarea>
             </div>
             <!-- honeypot to deter bots -->
-            <input type="text" name="_gotcha" id="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <button type="submit" class="btn btn--theme contact__btn" id="contactSubmit">
+            <input
+              type="text"
+              name="_gotcha"
+              id="_gotcha"
+              style="display: none"
+              tabindex="-1"
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="btn btn--theme contact__btn"
+              id="contactSubmit"
+            >
               Submit
             </button>
           </form>
@@ -443,21 +474,29 @@
               <span>Social</span>
             </h2>
             <div class="main-footer__social-cont">
-                <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/aziz-wardi">
-                  <img
-                    class="main-footer__icon"
-                    src="./assets/png/linkedin-ico.png"
-                    alt="LinkedIn"
-                  />
-                </a>
-                <a target="_blank" rel="noreferrer" href="https://github.com/azizwardi">
-                  <img
-                    class="main-footer__icon"
-                    src="./assets/png/github-ico.png"
-                    alt="GitHub"
-                  />
-                </a>
-                <!-- Twitter, YouTube and Instagram removed -->
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://linkedin.com/in/aziz-wardi"
+              >
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="LinkedIn"
+                />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/azizwardi"
+              >
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="GitHub"
+                />
+              </a>
+              <!-- Twitter, YouTube and Instagram removed -->
             </div>
           </div>
           <div class="main-footer__row main-footer__row-2">
@@ -472,7 +511,10 @@
         <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
         <div class="main-footer__lower">
           &copy; Copyright 2025. Made by
-          <a rel="noreferrer" target="_blank" href="https://github.com/azizwardi"
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/azizwardi"
             >Wardi Med Aziz</a
           >
         </div>
@@ -480,10 +522,23 @@
     </footer>
 
     <!-- Contact popup toast markup -->
-    <div id="contact-popup" class="contact-popup" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <div
+      id="contact-popup"
+      class="contact-popup"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      hidden
+    >
       <div class="contact-popup__icon" id="contact-popup-icon">✓</div>
       <div class="contact-popup__msg" id="contact-popup-msg">Message sent</div>
-      <button id="contact-popup-close" class="contact-popup__close" aria-label="Dismiss">✕</button>
+      <button
+        id="contact-popup-close"
+        class="contact-popup__close"
+        aria-label="Dismiss"
+      >
+        ✕
+      </button>
     </div>
     <script src="./index.js"></script>
   </body>
