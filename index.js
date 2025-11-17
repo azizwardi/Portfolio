@@ -45,6 +45,43 @@ headerLogoConatiner.addEventListener('click', () => {
 
   if (!form) return
 
+  // Helper: create colored tech chip HTML — exposed globally for inline fallback
+  function normalizeTechKey(name) {
+    if (!name) return ''
+    return String(name).toLowerCase().trim()
+  }
+
+  function chipClassFor(name) {
+    const n = normalizeTechKey(name)
+    if (n.indexOf('react') !== -1) return 'chip-react'
+    if (n.indexOf('angular') !== -1) return 'chip-angular'
+    if (n.indexOf('node') !== -1) return 'chip-node'
+    if (n.indexOf('docker') !== -1) return 'chip-docker'
+    if (n.indexOf('spring') !== -1) return 'chip-spring'
+    if (n.indexOf('java') !== -1) return 'chip-java'
+    if (n.indexOf('mysql') !== -1) return 'chip-mysql'
+    if (n.indexOf('post') !== -1) return 'chip-postgres'
+    if (n.indexOf('grafana') !== -1) return 'chip-grafana'
+    if (n.indexOf('prometheus') !== -1) return 'chip-prometheus'
+    if (n.indexOf('ci') !== -1 || n.indexOf('cicd') !== -1) return 'chip-cicd'
+    if (n.indexOf('type') !== -1 || n === 'ts') return 'chip-ts'
+    return 'chip-default'
+  }
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (m) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]
+    })
+  }
+
+  function createTechChipHTML(name) {
+    const cls = chipClassFor(name)
+    return `<span class="tech-chip ${cls}" title="${escapeHtml(name)}">${escapeHtml(name)}</span>`
+  }
+
+  // expose for inline fallback script
+  window.createTechChipHTML = createTechChipHTML
+
   // Enhanced status: inline element (legacy) + floating toast popup
   let popupTimer = null
   const popup = document.getElementById('contact-popup')
@@ -143,6 +180,102 @@ headerLogoConatiner.addEventListener('click', () => {
     } finally {
       submitBtn.disabled = false
       submitBtn.textContent = 'Submit'
+    }
+  })
+})()
+
+// Project modal interactions
+(function () {
+  const modal = document.getElementById('project-modal')
+  if (!modal) return
+
+  const overlay = modal.querySelector('.project-modal__overlay')
+  const closeBtn = modal.querySelector('.project-modal__close')
+  const imgEl = modal.querySelector('.project-modal__img')
+  const titleEl = modal.querySelector('.project-modal__title')
+  const descEl = modal.querySelector('.project-modal__desc')
+  const linksEl = modal.querySelector('.project-modal__links')
+  const techEl = modal.querySelector('.project-modal__tech')
+  let lastFocused = null
+
+  function onKeydown(e) {
+    if (e.key === 'Escape') closeModal()
+  }
+
+  function openModalFromCard(card) {
+    lastFocused = document.activeElement
+    const img = card.querySelector('.project-card__img')
+    const title = card.querySelector('.project-card__title')
+    const desc = card.querySelector('.project-card__desc')
+    const fullDesc = card.dataset && card.dataset.fullDesc ? card.dataset.fullDesc : (desc ? desc.textContent : '')
+    const links = card.querySelector('.project-card__links')
+    const cardTech = card.dataset && card.dataset.tech ? card.dataset.tech : (card.querySelector('.project-card__tech') ? card.querySelector('.project-card__tech').innerHTML : '')
+
+    if (imgEl && img) {
+      imgEl.src = img.src
+      imgEl.alt = img.alt || (title && title.textContent) || 'Project image'
+    }
+    if (titleEl && title) titleEl.textContent = title.textContent
+    if (descEl) descEl.textContent = fullDesc
+    if (linksEl) {
+        if (links) {
+          const clone = links.cloneNode(true)
+          clone.querySelectorAll('.project-card__more').forEach(n => n.remove())
+          linksEl.innerHTML = clone.innerHTML
+          linksEl.querySelectorAll('a').forEach((a) => a.setAttribute('target', '_blank'))
+        } else {
+          linksEl.innerHTML = ''
+        }
+    }
+    if (techEl) {
+      if (card.querySelector && card.querySelector('.project-card__tech')) {
+        techEl.innerHTML = card.querySelector('.project-card__tech').innerHTML
+      } else if (cardTech) {
+        // fallback: create chips from comma list
+        const items = String(cardTech).split(',').map(s => s.trim()).filter(Boolean)
+        techEl.innerHTML = items.map(t => (typeof createTechChipHTML === 'function' ? createTechChipHTML(t) : `<span class="tech-chip">${t}</span>`)).join(' ')
+      } else {
+        techEl.innerHTML = ''
+      }
+    }
+
+    modal.removeAttribute('hidden')
+    modal.setAttribute('aria-hidden', 'false')
+    window.requestAnimationFrame(() => {
+      if (closeBtn && typeof closeBtn.focus === 'function') closeBtn.focus()
+    })
+    document.addEventListener('keydown', onKeydown)
+  }
+
+  function closeModal() {
+    modal.setAttribute('hidden', '')
+    modal.setAttribute('aria-hidden', 'true')
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus()
+    document.removeEventListener('keydown', onKeydown)
+  }
+
+  if (overlay) overlay.addEventListener('click', closeModal)
+  if (closeBtn) closeBtn.addEventListener('click', closeModal)
+
+  // Attach modal opening to the 'More details' link inside each card
+  document.querySelectorAll('.project-card__more').forEach((btn) => {
+    try { btn.style.cursor = 'pointer' } catch (e) { /* ignore */ }
+    btn.addEventListener('click', (e) => {
+      e.preventDefault()
+      const card = btn.closest('.project-card')
+      if (!card) return
+      openModalFromCard(card)
+    })
+  })
+
+  // Ensure existing chips get color classes (for static card markup)
+  document.querySelectorAll('.tech-chip').forEach((el) => {
+    try {
+      const txt = el.textContent || el.innerText || ''
+      const cls = chipClassFor(txt)
+      if (cls && !el.classList.contains(cls)) el.classList.add(cls)
+    } catch (e) {
+      /* ignore */
     }
   })
 })()

@@ -219,41 +219,41 @@
   background-position: center;
 
   &__form-container {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: rgba(#fff, 2);
-    padding: 4rem;
-    margin-top: 6rem;
-    max-width: 80rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    background: rgba(#fff, 0.98);
+    padding: 2rem; /* reduced padding to make section smaller */
+    margin-top: 3rem;
+    max-width: 60rem; /* constrain width */
     text-align: right;
-    width: 95%;
+    width: 90%;
     border-radius: vars.$commonBorderRadius;
 
-    margin: 5rem auto 0 auto;
+    margin: 3rem auto 0 auto;
     @include mixins.respond(phone) {
-      padding: 3rem;
+      padding: 1.4rem;
     }
   }
   &__form-field {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem; /* reduce vertical space between fields */
     @include mixins.respond(phone) {
-      margin-bottom: 3rem;
+      margin-bottom: 1.4rem;
     }
   }
   &__form-label {
     color: #666;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+    font-size: 1.2rem; /* slightly smaller labels */
+    letter-spacing: 0.6px;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     display: block;
     text-align: left;
   }
   &__form-input {
     color: #333;
-    padding: 2rem;
+    padding: 1rem; /* smaller input padding */
     width: 100%;
     border: 1px solid rgb(235, 235, 235);
-    font-size: 1.6rem;
+    font-size: 1.4rem; /* slightly reduced font-size */
     letter-spacing: 0px;
     background: rgba(rgb(240, 240, 240), 1);
     border-radius: vars.$commonBorderRadius;
@@ -262,28 +262,28 @@
     &::placeholder {
       color: #999;
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     /* Code for WebKit, Blink, Edge */
     &::-webkit-input-placeholder {
       color: #999;
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     /* Code for Internet Explorer 10-11 */
     &:-ms-input-placeholder {
       color: #999;
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     /* Code for Microsoft Edge */
     &::-ms-input-placeholder {
       color: #999;
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     /* Code for Mozilla Firefox 4 to 18 */
@@ -291,7 +291,7 @@
       opacity: 1;
       color: #999;
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     /* Code for Mozilla Firefox 19+ */
@@ -299,14 +299,14 @@
       opacity: 1;
       color: #999;
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
   &__btn {
-    width: 30%;
+    width: 22%;
 
-    padding: 2rem 4rem;
-    font-size: 1.6rem;
+    padding: 1rem 2rem; /* smaller click target but still comfortable */
+    font-size: 1.4rem;
     @include mixins.respond(phone) {
       width: 100%;
     }

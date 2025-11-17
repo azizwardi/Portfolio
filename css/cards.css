@@ -1,0 +1,72 @@
+/* cards.css - overrides to make project cards symmetric */
+.projects__grid{align-items:stretch}
+.project-card{position:relative;display:flex;flex-direction:column;height:100%;padding:1.6rem 1.6rem 3.6rem 1.6rem;box-sizing:border-box}
+.project-card__img{flex:0 0 200px;height:200px;object-fit:cover;border-radius:8px;margin-bottom:1rem}
+.project-card__title{min-height:4.8rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.project-card__desc{min-height:4.8rem}
+.project-card__tech{min-height:2.4rem;margin-top:0.6rem}
+.project-card__links{margin-top:auto;display:flex;justify-content:space-between;gap:0.4rem}
+.project-card__links .project-card__link{flex:0 0 auto}
+
+/* 'More details' link/button that opens the modal (placed at card bottom) */
+.project-card__more{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  z-index:999;
+  display:inline-flex;
+  align-items:center;
+  gap:0.45rem;
+  background:transparent;
+  border:none;
+  color:#374151; /* dark grey text */
+  text-decoration:none;
+  font-weight:600;
+  padding:0.15rem 0.4rem;
+  border-radius:6px;
+  font-size:1.2rem;
+}
+.project-card__more:hover{opacity:0.95;transform:translateY(-1px)}
+
+.project-card__more-icon{display:inline-block;color:#6b7280;flex:0 0 auto}
+.project-card__more-icon svg{display:block;width:14px;height:14px}
+.project-card__more-text{color:#374151;text-shadow:0 0 1px rgba(0,0,0,0.06)}
+
+/* Pin GitHub icon to top-right of card */
+.project-card__github{
+  position:absolute;
+  bottom:12px;
+  right:12px;
+  z-index:999 !important;
+  background:rgba(255,255,255,0.95) !important;
+  padding:6px !important;
+  border-radius:8px !important;
+  display:inline-grid !important;
+  place-items:center !important;
+  box-shadow:0 6px 18px rgba(2,6,23,0.08) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+}
+.project-card__github img,.project-card__github svg{width:28px;height:28px;display:block}
+
+@media (max-width: 520px){
+  .project-card__github{bottom:8px;right:8px;padding:4px}
+  .project-card__github img,.project-card__github svg{width:24px;height:24px}
+}
+
+@media (max-width: 56.25em){
+  .project-card__img{height:180px}
+  .project-card__title{min-height:4.2rem}
+  .project-card__desc{min-height:4.2rem}
+}
+
+/* chip sizing */
+.tech-chip{font-size:1.2rem;padding:0.35rem 0.6rem}
+
+/* Slightly darker transparent blue appearance for chips */
+.tech-chip{background:rgba(37,99,235,0.22) !important;color:rgba(6,40,89,0.96) !important;border:1px solid rgba(37,99,235,0.28) !important}
+.tech-chip:hover{background:rgba(37,99,235,0.32) !important;transform:translateY(-1px);transition:all 120ms ease}
+
+/* Keep specific chip classes available but do not override the uniform blue style */
+.chip-react,.chip-angular,.chip-node,.chip-java,.chip-spring,.chip-docker,.chip-mysql,.chip-postgres,.chip-grafana,.chip-prometheus,.chip-cicd,.chip-ts,.chip-default{background:transparent!important;color:inherit!important;border-color:transparent!important}
