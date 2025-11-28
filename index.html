@@ -9,12 +9,21 @@
     <meta name="contact-endpoint" content="https://formspree.io/f/mqawkzqr" />
     <meta name="description" content="Portfolio Template for Developer" />
 
+    <link rel="icon" type="image/svg+xml" href="./assets/svg/favicon.svg" />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/cards.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons.css">
+
+
   </head>
   <body>
     <header class="header">
@@ -27,6 +36,15 @@
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#experience" class="header__link">Experience </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#education" class="header__link">Education </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#skills" class="header__link">Skills </a>
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#projects" class="header__link">
@@ -60,6 +78,17 @@
 
             <li class="header__sm-menu-link">
               <a href="./index.html#about"> About </a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./index.html#experience"> Experience </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#education"> Education </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#skills"> Skills </a>
             </li>
 
             <li class="header__sm-menu-link">
@@ -106,13 +135,13 @@
             class="home-hero__social-icon-link"
             target="_blank"
           >
-                    <img
-                      src="./assets/png/github-ico.png"
-                      alt="GitHub"
-                      width="30"
-                      height="30"
-                      class="home-hero__social-icon"
-                    />
+            <img
+              src="./assets/png/github-ico.png"
+              alt="GitHub"
+              width="30"
+              height="30"
+              class="home-hero__social-icon"
+            />
           </a>
         </div>
         <!-- YouTube and Instagram removed -->
@@ -135,19 +164,6 @@
           <div class="about__content-main">
             <h3 class="about__content-title">Get to know me!</h3>
             <div class="about__content-details">
-
-            if(prevBtn){
-              prevBtn.addEventListener('click', ()=>{
-                if(!modalImages || modalImages.length === 0) return
-                setSlide(modalSlideIndex - 1)
-              })
-            }
-            if(nextBtn){
-              nextBtn.addEventListener('click', ()=>{
-                if(!modalImages || modalImages.length === 0) return
-                setSlide(modalSlideIndex + 1)
-              })
-            }
               <p class="about__content-details-para">
                 Hi! I'm <strong>Wardi Med Aziz</strong>, a
                 <strong>Full Stack Web Developer</strong> based in Bizerte,
@@ -168,27 +184,263 @@
               >Contact</a
             >
           </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">TypeScript</div>
-              <div class="skills__skill">Angular</div>
-              <div class="skills__skill">React</div>
-              <div class="skills__skill">Node.js</div>
-              <div class="skills__skill">Spring Boot</div>
-              <div class="skills__skill">SQL</div>
-              <div class="skills__skill">MongoDB</div>
-              <div class="skills__skill">Git</div>
-              <div class="skills__skill">Docker</div>
-              <div class="skills__skill">Kubernetes</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
+
+    <section id="education" class="education sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">Education</span>
+          <span class="heading-sec__sub">
+            Academic journey focused on software engineering, web technologies, and embedded systems.
+          </span>
+        </h2>
+        <div class="education__list">
+          <article class="education-card">
+            <div class="education-card__period">2023 – Present</div>
+            <div class="education-card__body">
+              <h3 class="education-card__degree">Cycle d’ingénieur en Technologies de l’Informatique</h3>
+              <p class="education-card__institution">ESPRIT</p>
+              <p class="education-card__focus">Spécialité TWIN — Technologies du Web et de l’Internet</p>
+            </div>
+          </article>
+          <article class="education-card">
+            <div class="education-card__period">2020 – 2023</div>
+            <div class="education-card__body">
+              <h3 class="education-card__degree">Licence nationale en Génie Informatique</h3>
+              <p class="education-card__institution">ISIMa</p>
+              <p class="education-card__focus">Spécialité IoT et Systèmes Embarqués</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   <section id="experience" class="experience sec-pad">
+  <div class="main-container">
+    <h2 class="heading heading-sec heading-sec__mb-med">
+      <span class="heading-sec__main">Experience</span>
+      <span class="heading-sec__sub">
+        Internships that strengthened my product thinking and delivery skills across banking, security, and IoT.
+      </span>
+    </h2>
+
+    <ul class="timeline">
+  <li>
+    <span class="timeline-date">2025</span>
+    <div class="timeline-content">
+      <span class="timeline-city">Tunis</span>
+      <h3 class="experience-card__role">Engineering Internship</h3>
+      <p class="experience-card__company">Arab Tunisian Bank</p>
+      <ul class="experience-card__points">
+        <li>Developed a cross-platform system for scanning and managing bank cards (mobile + web).</li>
+        <li>Designed secure data workflows for card processing and customer onboarding.</li>
+        <li>Built reusable UI components and optimized API routes for performance.</li>
+      </ul>
+      <div class="tech-tags">
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg" alt="React" class="tech-icon" /> ReactJS
+  </span>
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" alt="Node.js" class="tech-icon" /> Node.js
+  </span>
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/flutter.svg" alt="Flutter" class="tech-icon" /> Flutter
+  </span>
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/express.svg" alt="Express.js" class="tech-icon" /> Express.js
+  </span>
+</div>
+
+    </div>
+  </li>
+
+  <li>
+    <span class="timeline-date">2024</span>
+    <div class="timeline-content">
+      <span class="timeline-city">Tunis</span>
+      <h3 class="experience-card__role">Immersion Internship</h3>
+      <p class="experience-card__company">TunTrust — National Agency for Electronic Certification</p>
+      <ul class="experience-card__points">
+        <li>Deployed and maintained Kubernetes clusters for internal services.</li>
+        <li>Configured Docker environments and optimized container workflows.</li>
+        <li>Implemented observability using ELK Stack, Prometheus, and Grafana dashboards.</li>
+      </ul>
+      <div class="tech-tags">
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" class="tech-icon" alt="Docker"> Docker
+  </span>
+
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg" class="tech-icon" alt="Kubernetes"> Kubernetes
+  </span>
+
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/prometheus.svg" class="tech-icon" alt="Prometheus"> Prometheus
+  </span>
+
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/grafana.svg" class="tech-icon" alt="Grafana"> Grafana
+  </span>
+
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/elastic.svg" class="tech-icon" alt="ELK"> ELK
+  </span>
+</div>
+
+
+    </div>
+  </li>
+
+  <li>
+    <span class="timeline-date">2023</span>
+    <div class="timeline-content">
+      <span class="timeline-city">Bizerte</span>
+      <h3 class="experience-card__role">Final Year Internship</h3>
+      <p class="experience-card__company">Smart For Green</p>
+      <ul class="experience-card__points">
+        <li>Built an IoT system for compost monitoring using STM32 + LoRaWAN.</li>
+        <li>Developed embedded logic for sensor reading, alerts, and low-power operation.</li>
+        <li>Created a Django web dashboard for data visualization and system analytics.</li>
+      </ul>
+      <div class="tech-tags">
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/stmicroelectronics.svg" class="tech-icon" alt="STM32"> STM32
+  </span>
+
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg" class="tech-icon" alt="Embedded C"> Embedded C
+  </span>
+
+  <span class="tech-tag">
+    <img src="assets/svg/lorawan-seeklogo.svg" class="tech-icon" alt="LoRaWAN"> LoRaWAN
+  </span>
+
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/django.svg" class="tech-icon" alt="Django"> Django
+  </span>
+
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" class="tech-icon" alt="PostgreSQL"> PostgreSQL
+  </span>
+
+  <span class="tech-tag">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mqtt.svg" class="tech-icon" alt="MQTT"> MQTT
+  </span>
+</div>
+
+
+    </div>
+  </li>
+</ul>
+
+  </div>
+</section>
+
+<section id="skills" class="skills-modern sec-pad">
+  <div class="skills-container main-container">
+
+    <h2 class="heading heading-sec heading-sec__mb-med">
+      <span class="heading-sec__main">Skills</span>
+      <span class="heading-sec__sub">
+        Multi-disciplinary stack across front-end, back-end, DevOps, databases, testing, and applied AI.
+      </span>
+    </h2>
+
+    <div class="skills-grid">
+
+      <!-- Category -->
+      <article class="skill-card">
+        <h3 class="skill-card-title">
+          <i class="si si-angular"></i> Front-End
+        </h3>
+        <div class="skill-chips">
+          <span class="chip"><i class="si si-angular"></i> Angular</span>
+          <span class="chip"><i class="si si-react"></i> React</span>
+          <span class="chip"><i class="si si-html5"></i> HTML5</span>
+          <span class="chip"><i class="si si-css3"></i> CSS3</span>
+          <span class="chip"><i class="si si-javascript"></i> JavaScript</span>
+          <span class="chip"><i class="si si-typescript"></i> TypeScript</span>
+          <span class="chip"><i class="si si-tailwindcss"></i> Tailwind</span>
+          <span class="chip"><i class="si si-bootstrap"></i> Bootstrap</span>
+          <span class="chip"><i class="si si-materialui"></i> Material UI</span>
+          <span class="chip"><i class="si si-redux"></i> Redux</span>
+          <span class="chip"><i class="si si-ngrx"></i> NgRx</span>
+        </div>
+      </article>
+
+      <!-- Back-End -->
+      <article class="skill-card">
+        <h3 class="skill-card-title">
+          <i class="si si-java"></i> Back-End
+        </h3>
+        <div class="skill-chips">
+          <span class="chip"><i class="si si-java"></i> Java</span>
+          <span class="chip"><i class="si si-python"></i> Python</span>
+          <span class="chip"><i class="si si-node-dot-js"></i> Node.js</span>
+          <span class="chip"><i class="si si-express"></i> Express.js</span>
+          <span class="chip"><i class="si si-spring"></i> Spring Boot</span>
+          <span class="chip"><i class="si si-django"></i> Django</span>
+          <span class="chip"><i class="si si-laravel"></i> Laravel</span>
+          <span class="chip"><i class="si si-symfony"></i> Symfony</span>
+          <span class="chip"><i class="si si-dotnet"></i> .NET</span>
+          <span class="chip">REST / GraphQL</span>
+          <span class="chip">Microservices</span>
+        </div>
+      </article>
+
+      <!-- Databases -->
+      <article class="skill-card">
+        <h3 class="skill-card-title"><i class="si si-mysql"></i> Databases</h3>
+        <div class="skill-chips">
+          <span class="chip"><i class="si si-mysql"></i> MySQL</span>
+          <span class="chip"><i class="si si-postgresql"></i> PostgreSQL</span>
+          <span class="chip"><i class="si si-mongodb"></i> MongoDB</span>
+        </div>
+      </article>
+      <!-- DevOps -->
+      <article class="skill-card">
+        <h3 class="skill-card-title"><i class="si si-docker"></i> DevOps</h3>
+        <div class="skill-chips">
+          <span class="chip"><i class="si si-docker"></i> Docker</span>
+          <span class="chip"><i class="si si-kubernetes"></i> Kubernetes</span>
+          <span class="chip"><i class="si si-jenkins"></i> Jenkins</span>
+          <span class="chip"><i class="si si-prometheus"></i> Prometheus</span>
+          <span class="chip"><i class="si si-grafana"></i> Grafana</span>
+          <span class="chip"><i class="si si-elasticsearch"></i> ELK Stack</span>
+          <span class="chip"><i class="si si-git"></i> Git</span>
+        </div>
+      </article>
+
+      <!-- Tools -->
+      <article class="skill-card">
+        <h3 class="skill-card-title"><i class="si si-jira"></i> Tools</h3>
+        <div class="skill-chips">
+          <span class="chip"><i class="si si-jira"></i> Jira</span>
+          <span class="chip"><i class="si si-github"></i> GitHub</span>
+          <span class="chip"><i class="si si-trello"></i> Trello</span>
+          <span class="chip"><i class="si si-gitlab"></i> GitLab</span>
+          <span class="chip"><i class="si si-sourcetree"></i> SourceTree</span>
+        </div>
+      </article>
+
+      <!-- AI -->
+      <article class="skill-card">
+        <h3 class="skill-card-title"><i class="si si-openai"></i> AI Skills</h3>
+        <div class="skill-chips">
+          <span class="chip"><i class="si si-huggingface"></i> Hugging Face</span>
+          <span class="chip"><i class="si si-openai"></i> OpenAI APIs</span>
+          <span class="chip">Basic ML Models</span>
+          <span class="chip">Text Processing</span>
+          <span class="chip">OCR</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 
     <section id="projects" class="projects sec-pad">
       <div class="main-container">
@@ -201,18 +453,26 @@
 
         <div class="projects__content">
           <div class="projects__grid">
-            <div class="project-card" data-full-desc="A microservices-based platform for managing projects, tasks, and users, featuring a chatbot and AI-powered recommendations. Implemented CI/CD pipelines and monitoring with Grafana." data-features="Microservices architecture|AI-driven assistant|CI/CD with Grafana insights" data-screens='["./assets/member dashboard.JPG","./assets/png/project 3.png","./assets/jpeg/project-mockup-example.jpeg","./assets/png/john-doe.png","./assets/ecoev.JPG"]'>
+            <div
+              class="project-card"
+              data-full-desc="A microservices-based platform for managing projects, tasks, and users, featuring a chatbot and AI-powered recommendations. Implemented CI/CD pipelines and monitoring with Grafana."
+              data-features="Microservices architecture|AI-driven assistant|CI/CD with Grafana insights"
+              data-screens='["./assets/member dashboard.JPG","./assets/png/project 3.png","./assets/jpeg/project-mockup-example.jpeg","./assets/png/john-doe.png","./assets/ecoev.JPG"]'
+            >
               <img
                 src="./assets/member dashboard.JPG"
                 alt="Project 1"
                 class="project-card__img"
                 loading="lazy"
               />
-              <h3 class="project-card__title">
-                Project Management Platform
-              </h3>
-              <p class="project-card__desc">Project management platform (microservices, CI/CD).</p>
-              <div class="project-card__tech" data-tech="Microservices,Java,Spring Boot,Docker,Grafana,CI/CD">
+              <h3 class="project-card__title">Project Management Platform</h3>
+              <p class="project-card__desc">
+                Project management platform (microservices, CI/CD).
+              </p>
+              <div
+                class="project-card__tech"
+                data-tech="Microservices,Java,Spring Boot,Docker,Grafana,CI/CD"
+              >
                 <span class="tech-chip">Microservices</span>
                 <span class="tech-chip">Java</span>
                 <span class="tech-chip">Spring Boot</span>
@@ -220,13 +480,31 @@
                 <span class="tech-chip">Grafana</span>
                 <span class="tech-chip">CI/CD</span>
               </div>
-              
 
-              <div class="project-card__links" data-links='{"github":"https://github.com/azizwardi/Codevision/tree/aziz","demo":"./project-3.html"}'>
-                <a href="#" class="project-card__more" aria-label="Open details">
+              <div
+                class="project-card__links"
+                data-links='{"github":"https://github.com/azizwardi/Codevision/tree/aziz","demo":"./project-3.html"}'
+              >
+                <a
+                  href="#"
+                  class="project-card__more"
+                  aria-label="Open details"
+                >
                   <span class="project-card__more-icon" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
                       <polyline points="15 3 21 3 21 9"></polyline>
                       <line x1="10" y1="14" x2="21" y2="3"></line>
                     </svg>
@@ -240,8 +518,18 @@
                   aria-label="Open GitHub repository"
                   title="Open GitHub repository"
                 >
-                  <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"
+                    />
                   </svg>
                 </a>
                 <a
@@ -249,34 +537,58 @@
                   class="project-card__link"
                   target="_blank"
                 >
-                  <img src="./assets/png/linkedin-ico.png" alt="Website" />
                 </a>
               </div>
             </div>
-            <div class="project-card" data-full-desc="EcoEvents is a collaborative web platform that empowers organizers to create and manage sustainable events. It brings together tools for planning, participant engagement, and partnership management—all with an eco-conscious approach." data-features="Sustainable event toolkit|Real-time attendee engagement|Interactive map planning" data-screens='["./assets/ecoev.JPG"]'>
+            <div
+              class="project-card"
+              data-full-desc="EcoEvents is a collaborative web platform that empowers organizers to create and manage sustainable events. It brings together tools for planning, participant engagement, and partnership management—all with an eco-conscious approach."
+              data-features="Sustainable event toolkit|Real-time attendee engagement|Interactive map planning"
+              data-screens='["./assets/ecoev.JPG"]'
+            >
               <img
                 src="./assets/ecoev.JPG"
                 alt="Project 2"
                 class="project-card__img"
                 loading="lazy"
               />
-              <h3 class="project-card__title">
-                EcoEvents
-              </h3>
-              <p class="project-card__desc">Platform for sustainable event planning and participant engagement.</p>
-              <div class="project-card__tech" data-tech="React,Node.js,Express,Postgres,Leaflet">
+              <h3 class="project-card__title">EcoEvents</h3>
+              <p class="project-card__desc">
+                Platform for sustainable event planning and participant
+                engagement.
+              </p>
+              <div
+                class="project-card__tech"
+                data-tech="React,Node.js,Express,Postgres,Leaflet"
+              >
                 <span class="tech-chip">React</span>
                 <span class="tech-chip">Node.js</span>
                 <span class="tech-chip">Express</span>
                 <span class="tech-chip">Postgres</span>
                 <span class="tech-chip">Leaflet</span>
               </div>
-              
+
               <div class="project-card__links">
-                <a href="#" class="project-card__more" aria-label="Open details">
+                <a
+                  href="#"
+                  class="project-card__more"
+                  aria-label="Open details"
+                >
                   <span class="project-card__more-icon" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
                       <polyline points="15 3 21 3 21 9"></polyline>
                       <line x1="10" y1="14" x2="21" y2="3"></line>
                     </svg>
@@ -288,10 +600,20 @@
                   class="project-card__link project-card__github"
                   target="_blank"
                   rel="noopener"
-                  style="color:inherit;"
+                  style="color: inherit"
                 >
-                  <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"
+                    />
                   </svg>
                 </a>
                 <a
@@ -299,11 +621,15 @@
                   class="project-card__link"
                   target="_blank"
                 >
-                  <img src="./assets/png/linkedin-ico.png" alt="Website" />
                 </a>
               </div>
             </div>
-            <div class="project-card" data-full-desc="This DevOps-ready full-stack solution combines a Spring Boot backend, Angular frontend, and MySQL database in Docker containers with a Docker Compose stack. It integrates CI/CD (Jenkins, Nexus), code-quality automation (SonarQube), and monitoring tools (Prometheus, Grafana) for streamlined builds, reliable deployments, and full visibility." data-features="Dockerized Spring/Angular stack|Automated CI/CD pipelines|Prometheus & Grafana observability" data-screens='["./assets/png/project 3.png"]'>
+            <div
+              class="project-card"
+              data-full-desc="This DevOps-ready full-stack solution combines a Spring Boot backend, Angular frontend, and MySQL database in Docker containers with a Docker Compose stack. It integrates CI/CD (Jenkins, Nexus), code-quality automation (SonarQube), and monitoring tools (Prometheus, Grafana) for streamlined builds, reliable deployments, and full visibility."
+              data-features="Dockerized Spring/Angular stack|Automated CI/CD pipelines|Prometheus & Grafana observability"
+              data-screens='["./assets/png/project 3.png"]'
+            >
               <img
                 src="./assets/png/project 3.png"
                 alt="Project 3"
@@ -311,8 +637,13 @@
                 loading="lazy"
               />
               <h3 class="project-card__title">Full-Stack Delivery Framework</h3>
-              <p class="project-card__desc">DevOps-ready full-stack template (Spring Boot, Angular, Docker).</p>
-              <div class="project-card__tech" data-tech="Spring Boot,Angular,MySQL,Docker,CI/CD,Prometheus,Grafana">
+              <p class="project-card__desc">
+                DevOps-ready full-stack template (Spring Boot, Angular, Docker).
+              </p>
+              <div
+                class="project-card__tech"
+                data-tech="Spring Boot,Angular,MySQL,Docker,CI/CD,Prometheus,Grafana"
+              >
                 <span class="tech-chip">Spring Boot</span>
                 <span class="tech-chip">Angular</span>
                 <span class="tech-chip">MySQL</span>
@@ -322,10 +653,26 @@
                 <span class="tech-chip">Grafana</span>
               </div>
               <div class="project-card__links">
-                <a href="#" class="project-card__more" aria-label="Open details">
+                <a
+                  href="#"
+                  class="project-card__more"
+                  aria-label="Open details"
+                >
                   <span class="project-card__more-icon" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
                       <polyline points="15 3 21 3 21 9"></polyline>
                       <line x1="10" y1="14" x2="21" y2="3"></line>
                     </svg>
@@ -336,10 +683,20 @@
                   href="https://github.com/azizwardi/Codevision/tree/aziz"
                   class="project-card__link project-card__github"
                   target="_blank"
-                  style="color:inherit;"
+                  style="color: inherit"
                 >
-                  <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"
+                    />
                   </svg>
                 </a>
                 <a
@@ -347,7 +704,6 @@
                   class="project-card__link"
                   target="_blank"
                 >
-                  <img src="./assets/png/linkedin-ico.png" alt="Website" />
                 </a>
               </div>
             </div>
@@ -475,94 +831,452 @@
     <!-- Project details modal -->
     <style>
       /* Inline modal styles (kept here to avoid editing compiled css) */
-      .project-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:10000;padding:clamp(1.6rem,5vw,4.6rem)}
-      .project-modal[hidden]{display:none}
-      .project-modal__overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(2px)}
-      .project-modal__dialog{position:relative;background:#fff;border-radius:18px;max-width:1020px;width:min(96vw,960px);max-height:88vh;overflow-y:auto;overflow-x:hidden;box-shadow:0 28px 90px rgba(2,6,23,0.45);z-index:10002;padding:clamp(2.4rem,3.4vw,3.6rem)}
-      .project-modal__close{position:absolute;top:12px;right:12px;background:#fff;color:#111;border-radius:6px;padding:0.4rem 0.6rem;font-size:1.4rem;border:1px solid rgba(0,0,0,0.08);box-shadow:0 6px 18px rgba(2,6,23,0.08);z-index:10003;cursor:pointer}
-      .project-modal__img{width:100%;height:100%;object-fit:cover;border-radius:14px}
-      .project-modal__title{font-size:2.4rem;margin-bottom:0.6rem;color:#0f172a}
-      .project-modal__desc{color:rgb(74,85,104);font-size:1.05rem;line-height:1.8;margin:0;white-space:pre-line}
-      .project-modal__tech{margin-top:0.6rem;display:flex;flex-wrap:wrap;gap:0.5rem}
-      .project-card__tech{margin-top:0.8rem;display:flex;flex-wrap:wrap;gap:0.6rem}
-      .tech-chip{display:inline-block;padding:0.4rem 0.8rem;background:hsla(0,0%,20%,0.06);border-radius:999px;font-size:1.2rem;color:#333;border:1px solid rgba(0,0,0,0.06)}
-      @media (max-width: 720px){
-        .project-modal__inner{flex-direction:column}
-        .project-modal__left,.project-modal__right{width:100%}
-        .project-modal__right{min-height:220px}
-        .project-modal__text{min-height:260px}
-        .carousel__thumb{height:56px}
-        .carousel__stage{min-height:auto}
-        .project-modal__dialog{padding:clamp(1.2rem,7vw,1.8rem);width:92vw;max-height:92vh}
+      .project-modal {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        padding: clamp(1.6rem, 5vw, 4.6rem);
+      }
+      .project-modal[hidden] {
+        display: none;
+      }
+      .project-modal__overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(2px);
+      }
+      .project-modal__dialog {
+        position: relative;
+        background: linear-gradient(165deg, #ffffff 0%, #f4f6ff 100%);
+        border-radius: 20px;
+        max-width: 700px;
+        width: min(94vw, 680px);
+        max-height: 88vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-shadow: 0 28px 90px rgba(2, 6, 23, 0.45);
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        z-index: 10002;
+        padding: clamp(0.4rem, 1vw, 0.8rem);
+        scrollbar-width: thin;
+        scrollbar-color: rgba(59, 130, 246, 0.55) transparent;
+      }
+      .project-modal__close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: #fff;
+        color: #111;
+        border-radius: 6px;
+        padding: 0.4rem 0.6rem;
+        font-size: 1.4rem;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+        z-index: 10003;
+        cursor: pointer;
+      }
+      .project-modal__title {
+        font-size: 3.2rem;
+        margin:  1rem ;
+        color: #0b1733;
+        letter-spacing: 0.6px;
+      }
+      .project-modal__desc {
+        color: rgb(56, 68, 92);
+        font-size: 1.4rem;
+        line-height: 2.1;
+        margin: 0 0 1.4rem 0;
+        white-space: pre-line;
+      }
+      .project-modal__tech {
+        margin-top: 0.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .project-card__tech {
+        margin-top: 0.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+      .tech-chip {
+        display: inline-block;
+        padding: 0.55rem 1.1rem;
+        background: hsla(0, 0%, 20%, 0.06);
+        border-radius: 999px;
+        font-size: 1.35rem;
+        color: #333;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+      @media (max-width: 720px) {
+        .project-modal__dialog {
+          padding: clamp(0.4rem, 4vw, 0.8rem);
+          width: 92vw;
+          max-height: 92vh;
+        }
+        .project-modal__text {
+          padding: 0;
+          font-size: 1.28rem;
+        }
+        .project-carousel__viewport {
+          aspect-ratio: 16/12;
+          max-height: clamp(220px, 60vw, 360px);
+        }
       }
       /* Enhanced modal visuals and layout */
-      .project-modal__dialog{transition:transform .28s ease,opacity .22s ease}
-      .project-modal--closing .project-modal__dialog{transform:translateY(12px) scale(.995);opacity:0}
-      .project-modal__inner{display:flex;gap:clamp(1.4rem,2.8vw,3rem);align-items:stretch}
-      .project-modal__left{flex:0 0 52%;min-width:240px;display:flex;flex-direction:column;gap:clamp(1rem,2.2vw,1.6rem)}
-      .project-modal__right{flex:1 1 48%;display:flex;flex-direction:column;justify-content:space-between;gap:1.8rem;min-width:300px}
-      .project-modal__text{flex:1;padding:clamp(1.8rem,3vw,2.8rem);background:transparent;border-radius:20px;position:relative;overflow:auto;color:#0f172a;display:flex;flex-direction:column;font-size:1.12rem;line-height:1.92;min-height:340px;-ms-overflow-style:none;scrollbar-width:none}
-      .project-modal__text::-webkit-scrollbar{display:none}
-      .project-modal__text::after{content:none}
-      .project-modal__text > *:not(:last-child){margin-bottom:clamp(0.8rem,1.5vw,1.2rem)}
-      .project-modal__carousel{display:flex;flex-direction:column;gap:clamp(0.9rem,2vw,1.4rem);flex:1}
-      .carousel__stage{position:relative;flex:0 0 auto;border-radius:14px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;width:100%;max-height:clamp(240px,38vw,360px);min-height:clamp(210px,32vw,320px)}
-      .project-modal__carousel img{width:100%;height:100%;object-fit:contain;display:block;position:relative;z-index:1;background:#fff}
-      .carousel__control{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,0.45);background:rgba(15,23,42,0.24);color:#fff;display:flex;align-items:center;justify-content:center;z-index:2;cursor:pointer;transition:background .18s ease,border-color .18s ease,opacity .18s ease;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-      .carousel__control svg{width:20px;height:20px;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;fill:none}
-      .carousel__control--prev{left:1.2rem}
-      .carousel__control--next{right:1.2rem}
-      .carousel__control:hover{background:rgba(15,23,42,0.34);border-color:rgba(255,255,255,0.6)}
-      .carousel__control:focus-visible{outline:3px solid rgba(37,99,235,0.45);outline-offset:2px}
-      .carousel__control--inactive{opacity:0;pointer-events:none}
-      @media (hover: hover){
-        .carousel__control{opacity:0;}
-        .carousel__stage:hover .carousel__control{opacity:1}
-        .carousel__control:focus-visible{opacity:1}
+      .project-modal__dialog {
+        transition: transform 0.28s ease, opacity 0.22s ease;
       }
-      .carousel__thumbs{display:flex;flex-wrap:nowrap;gap:0.8rem;overflow-x:auto;padding:0.2rem 0 0.4rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-      .carousel__thumbs::-webkit-scrollbar{height:6px}
-      .carousel__thumbs::-webkit-scrollbar-track{background:rgba(148,163,184,0.18);border-radius:999px}
-      .carousel__thumbs::-webkit-scrollbar-thumb{background:rgba(37,99,235,0.35);border-radius:999px}
-      .carousel__thumb{flex:0 0 auto;width:98px;height:68px;border-radius:12px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .16s ease,transform .16s ease,box-shadow .16s ease;background:#f1f5f9;display:flex;align-items:center;justify-content:center}
-      .carousel__thumb img{width:100%;height:100%;object-fit:cover;display:block}
-      .carousel__thumb:hover{transform:translateY(-2px)}
-      .carousel__thumb.is-active{border-color:#2563eb;box-shadow:0 6px 18px rgba(37,99,235,0.36)}
-      .carousel__progress{display:none;height:6px;border-radius:999px;background:rgba(148,163,184,0.22);overflow:hidden;position:relative;cursor:pointer;user-select:none;touch-action:none}
-      .carousel__progress:focus-visible{outline:3px solid rgba(37,99,235,0.55);outline-offset:4px}
-      .carousel__progress-fill{position:absolute;inset:0 auto 0 0;background:linear-gradient(90deg,#2563eb,#9333ea);width:0%;transition:width .25s ease}
-      .carousel__progress.is-disabled{cursor:default;opacity:0.5}
-      .project-modal__actions{display:none}
-      .project-modal__features{margin-top:0.8rem;text-align:left}
-      .project-modal__features-heading{font-size:1.05rem;color:#1e293b;margin:0 0 0.6rem 0}
-      .project-modal__features ul{padding-left:1.1rem;margin:0.2rem 0}
-      .project-modal__features li{margin:0.45rem 0}
-      .project-modal__dialog{box-shadow:0 60px 160px rgba(2,6,23,0.5);border-radius:18px}
+      .project-modal__dialog::-webkit-scrollbar {
+        width: 8px;
+      }
+      .project-modal__dialog::-webkit-scrollbar-button {
+        height: 0;
+        display: none;
+      }
+      .project-modal__dialog::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 999px;
+        box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08);
+      }
+      .project-modal__dialog::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+          180deg,
+          rgba(59, 130, 246, 0.85) 0%,
+          rgba(37, 99, 235, 0.85) 100%
+        );
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background-clip: padding-box;
+        box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.28);
+      }
+      .project-modal__dialog::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(
+          180deg,
+          rgba(59, 130, 246, 1) 0%,
+          rgba(29, 78, 216, 0.96) 100%
+        );
+      }
+      .project-modal--closing .project-modal__dialog {
+        transform: translateY(12px) scale(0.995);
+        opacity: 0;
+      }
+      .project-modal__inner {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(0.8rem, 2vw, 1.2rem);
+        align-items: stretch;
+      }
+      .project-modal__left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1rem, 2vw, 1.4rem);
+      }
+      .project-modal__right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.1rem, 2.2vw, 1.6rem);
+        padding-inline: 0;
+      }
+      .project-modal__text {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        position: relative;
+        color: #0f172a;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        line-height: 2.1;
+        overflow: auto;
+        border: none;
+        box-shadow: none;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(59, 130, 246, 0.5) transparent;
+      }
+      .project-modal__text::-webkit-scrollbar {
+        width: 8px;
+      }
+      .project-modal__text::-webkit-scrollbar-button {
+        height: 0;
+        display: none;
+      }
+      .project-modal__text::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 999px;
+        box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08);
+      }
+      .project-modal__text::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+          180deg,
+          rgba(59, 130, 246, 0.94) 0%,
+          rgba(37, 99, 235, 0.96) 100%
+        );
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background-clip: padding-box;
+        box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.28);
+      }
+      .project-modal__text:hover::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+          180deg,
+          rgba(59, 130, 246, 1) 0%,
+          rgba(29, 78, 216, 0.98) 100%
+        );
+      }
+      .project-modal__text::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+      .project-modal__text::after {
+        content: none;
+      }
+      .project-modal__text > *:not(:last-child) {
+        margin-bottom: clamp(0.8rem, 1.8vw, 1.2rem);
+      }
+      .project-modal__carousel {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1rem, 2vw, 1.4rem);
+      }
+      .project-carousel {
+        position: relative;
+        width: 100%;
+      }
+      .project-carousel__viewport {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        background: transparent;
+        aspect-ratio: 16/10;
+        width: 100%;
+        max-height: clamp(260px, 42vw, 420px);
+        box-shadow: none;
+      }
+      .project-carousel__slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .project-carousel__slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+      }
+      .project-carousel__slide.is-active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .project-carousel__slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: #fff;
+      }
+      .project-carousel__control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        background: rgba(15, 23, 42, 0.24);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        cursor: pointer;
+        transition: background 0.18s ease, border-color 0.18s ease,
+          opacity 0.18s ease;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .project-carousel__control svg {
+        width: 20px;
+        height: 20px;
+        stroke: currentColor;
+        stroke-width: 2.1;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+      .project-carousel__control--prev {
+        left: 1.2rem;
+      }
+      .project-carousel__control--next {
+        right: 1.2rem;
+      }
+      .project-carousel__control:hover {
+        background: rgba(15, 23, 42, 0.34);
+        border-color: rgba(255, 255, 255, 0.6);
+      }
+      .project-carousel__control:focus-visible {
+        outline: 3px solid rgba(37, 99, 235, 0.45);
+        outline-offset: 2px;
+      }
+      .project-carousel__control[disabled] {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .project-carousel__indicators {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 0;
+        list-style: none;
+      }
+      .project-carousel__indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        background: rgba(59, 79, 120, 0.28);
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.2s ease;
+        border: none;
+      }
+      .project-carousel__indicator.is-active {
+        transform: scale(1.2);
+        background: #3b82f6;
+      }
+      .project-carousel__indicator:focus-visible {
+        outline: 3px solid rgba(59, 130, 246, 0.45);
+        outline-offset: 3px;
+      }
+      .project-carousel__placeholder {
+        display: grid;
+        place-items: center;
+        height: 100%;
+        padding: 2.4rem;
+        font-size: 1.3rem;
+        color: #475569;
+        background: linear-gradient(
+          135deg,
+          rgba(226, 232, 255, 0.9),
+          rgba(200, 212, 255, 0.75)
+        );
+        text-align: center;
+        line-height: 1.6;
+      }
+      @media (hover: hover) {
+        .project-carousel__control {
+          opacity: 0;
+        }
+        .project-carousel__viewport:hover .project-carousel__control {
+          opacity: 1;
+        }
+        .project-carousel__control:focus-visible {
+          opacity: 1;
+        }
+      }
+      .project-modal__actions {
+        display: none;
+      }
+      .project-modal__features {
+        margin-top: 0.4;
+        text-align: left;
+      }
+      .project-modal__features[hidden] {
+        display: none !important;
+      }
+      .project-modal__features-heading {
+        font-size: 1.4rem;
+        color: #1a2647;
+        margin: 0 0 0.8rem 0;
+      }
+      .project-modal__features ul {
+        padding-left: 1.2rem;
+        margin: 0 0 0.6rem 0;
+      }
+      .project-modal__features li {
+        margin: 0.7rem 0;
+        font-size: 1.28rem;
+        line-height: 1.95;
+        color: #354361;
+      }
+      .project-modal__dialog {
+        box-shadow: 0 60px 160px rgba(2, 6, 23, 0.5);
+        border-radius: 20px;
+      }
       /* removed modal github and see-full buttons (managed in card links) */
       /* tech chip interactions */
-      .tech-chip{transition:transform .12s ease,background .12s,color .12s}
-      .tech-chip:hover{transform:translateY(-3px) scale(1.04);background:rgba(37,99,235,0.28);color:#04306b}
+      .tech-chip {
+        transition: transform 0.12s ease, background 0.12s, color 0.12s;
+      }
+      .tech-chip:hover {
+        transform: translateY(-3px) scale(1.04);
+        background: rgba(37, 99, 235, 0.28);
+        color: #04306b;
+      }
       /* tooltip */
-      .tech-tooltip{position:absolute;padding:8px 10px;background:#111;color:#fff;border-radius:6px;font-size:13px;white-space:nowrap;pointer-events:none;opacity:0;transform:translateY(-6px);transition:opacity .12s,transform .12s}
+      .tech-tooltip {
+        position: absolute;
+        padding: 8px 10px;
+        background: #111;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 13px;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-6px);
+        transition: opacity 0.12s, transform 0.12s;
+      }
     </style>
-    <div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+    <div
+      id="project-modal"
+      class="project-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      hidden
+    >
       <div class="project-modal__overlay" data-close="true"></div>
       <div class="project-modal__dialog">
-        <button class="project-modal__close" aria-label="Close project details">✕</button>
+        <button class="project-modal__close" aria-label="Close project details">
+          ✕
+        </button>
         <div class="project-modal__inner">
           <div class="project-modal__left">
             <div class="project-modal__carousel">
-              <div class="carousel__stage">
-                <button type="button" class="carousel__control carousel__control--prev" aria-label="Previous screenshot">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
-                </button>
-                <img class="project-modal__img" src="" alt="" />
-                <button type="button" class="carousel__control carousel__control--next" aria-label="Next screenshot">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-                </button>
+              <div class="project-carousel" aria-live="polite">
+                <div class="project-carousel__viewport">
+                  <button
+                    type="button"
+                    class="project-carousel__control project-carousel__control--prev"
+                    aria-label="Previous screenshot"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M15 5l-7 7 7 7" />
+                    </svg>
+                  </button>
+                  <div class="project-carousel__slides"></div>
+                  <button
+                    type="button"
+                    class="project-carousel__control project-carousel__control--next"
+                    aria-label="Next screenshot"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="project-carousel__indicators"
+                  role="tablist"
+                  aria-label="Project slide indicators"
+                ></div>
               </div>
-              <div class="carousel__thumbs" aria-label="Project screenshots"></div>
-              <div class="carousel__progress" role="slider" aria-label="Project slideshow" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1" tabindex="0"><span class="carousel__progress-fill"></span></div>
             </div>
           </div>
 
@@ -604,437 +1318,476 @@
       // Fallback modal initializer (safe, small, independent)
       (function () {
         try {
-          const modal = document.getElementById('project-modal')
+          const modal = document.getElementById("project-modal");
           if (!modal) {
-            console.warn('Project modal element not found')
-            return
+            console.warn("Project modal element not found");
+            return;
           }
 
-          const overlay = modal.querySelector('.project-modal__overlay')
-          const closeBtn = modal.querySelector('.project-modal__close')
-          const imgEl = modal.querySelector('.project-modal__img')
-          const titleEl = modal.querySelector('.project-modal__title')
-          const descEl = modal.querySelector('.project-modal__desc')
-          const actionsEl = modal.querySelector('.project-modal__actions')
-          const progressTrack = modal.querySelector('.carousel__progress')
-          const progressFill = modal.querySelector('.carousel__progress-fill')
-          const prevBtn = modal.querySelector('.carousel__control--prev')
-          const nextBtn = modal.querySelector('.carousel__control--next')
-          let lastFocused = null
+          const overlay = modal.querySelector(".project-modal__overlay");
+          const closeBtn = modal.querySelector(".project-modal__close");
+          const titleEl = modal.querySelector(".project-modal__title");
+          const descEl = modal.querySelector(".project-modal__desc");
+          const actionsEl = modal.querySelector(".project-modal__actions");
+          const featuresSection = modal.querySelector(
+            ".project-modal__features"
+          );
+          const featuresHeading = featuresSection
+            ? featuresSection.querySelector(".project-modal__features-heading")
+            : null;
+          const slidesContainer = modal.querySelector(
+            ".project-carousel__slides"
+          );
+          const indicatorsContainer = modal.querySelector(
+            ".project-carousel__indicators"
+          );
+          const prevBtn = modal.querySelector(
+            ".project-carousel__control--prev"
+          );
+          const nextBtn = modal.querySelector(
+            ".project-carousel__control--next"
+          );
+          let lastFocused = null;
+          let modalImages = [];
+          let modalSlideIndex = 0;
 
           function onKeydown(e) {
-            if (e.key === 'Escape') {
-              closeModal()
-              return
+            if (e.key === "Escape") {
+              closeModal();
+              return;
             }
-            if(!modalImages || modalImages.length < 2) return
-            if(e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-              e.preventDefault()
-              setSlide(modalSlideIndex + 1)
-            } else if(e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-              e.preventDefault()
-              setSlide(modalSlideIndex - 1)
+            if (!modalImages || modalImages.length < 2) return;
+            if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+              e.preventDefault();
+              setSlide(modalSlideIndex + 1);
+            } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+              e.preventDefault();
+              setSlide(modalSlideIndex - 1);
             }
           }
 
           function openModalFromCard(card) {
-            lastFocused = document.activeElement
-            const img = card.querySelector('.project-card__img')
-            const title = card.querySelector('.project-card__title')
-            const desc = card.querySelector('.project-card__desc')
-            const links = card.querySelector('.project-card__links')
+            lastFocused = document.activeElement;
+            const title = card.querySelector(".project-card__title");
+            const desc = card.querySelector(".project-card__desc");
 
-            if (imgEl && img) {
-              imgEl.src = img.src
-              imgEl.alt = img.alt || (title && title.textContent) || 'Project image'
-            }
-            if (titleEl && title) titleEl.textContent = title.textContent
-            const fullDesc = card.dataset && card.dataset.fullDesc ? card.dataset.fullDesc : (desc ? desc.textContent : '')
-            if (descEl) descEl.textContent = fullDesc
+            if (titleEl && title) titleEl.textContent = title.textContent;
+            const fullDesc =
+              card.dataset && card.dataset.fullDesc
+                ? card.dataset.fullDesc
+                : desc
+                ? desc.textContent
+                : "";
+            if (descEl) descEl.textContent = fullDesc;
             // populate techs in fallback script
-            const modalTech = modal.querySelector('.project-modal__tech')
+            const modalTech = modal.querySelector(".project-modal__tech");
             if (modalTech) {
-              const cardTechEl = card.querySelector('.project-card__tech')
+              const cardTechEl = card.querySelector(".project-card__tech");
               if (cardTechEl) {
-                modalTech.innerHTML = cardTechEl.innerHTML
+                modalTech.innerHTML = cardTechEl.innerHTML;
               } else if (card.dataset && card.dataset.tech) {
-                modalTech.innerHTML = card.dataset.tech.split(',').map(t=> (window.createTechChipHTML ? window.createTechChipHTML(t.trim()) : `<span class="tech-chip">${t.trim()}</span>`)).join(' ')
+                modalTech.innerHTML = card.dataset.tech
+                  .split(",")
+                  .map((t) =>
+                    window.createTechChipHTML
+                      ? window.createTechChipHTML(t.trim())
+                      : `<span class="tech-chip">${t.trim()}</span>`
+                  )
+                  .join(" ");
               } else {
-                modalTech.innerHTML = ''
+                modalTech.innerHTML = "";
               }
             }
             if (actionsEl) {
-              actionsEl.innerHTML = ''
-              actionsEl.setAttribute('hidden', '')
+              actionsEl.innerHTML = "";
+              actionsEl.setAttribute("hidden", "");
             }
 
             // populate features list (try dataset.features or derive from description)
-            const featList = modal.querySelector('.project-modal__features-list')
+            const featList = modal.querySelector(
+              ".project-modal__features-list"
+            );
             if (featList) {
-              let feats = []
+              let feats = [];
               if (card.dataset && card.dataset.features) {
-                feats = card.dataset.features.split('|').map(s=>s.trim()).filter(Boolean)
+                feats = card.dataset.features
+                  .split("|")
+                  .map((s) => s.trim())
+                  .filter(Boolean);
               } else if (fullDesc) {
-                feats = fullDesc.split(/[\.\n]/).map(s=>s.trim()).filter(Boolean).slice(0,3)
+                feats = fullDesc
+                  .split(/[\.\n]/)
+                  .map((s) => s.trim())
+                  .filter(Boolean)
+                  .slice(0, 3);
               }
-              featList.innerHTML = ''
-              feats.forEach(f=>{ const li = document.createElement('li'); li.textContent = f; featList.appendChild(li) })
+              featList.innerHTML = "";
+              feats.forEach((f) => {
+                const li = document.createElement("li");
+                li.textContent = f;
+                featList.appendChild(li);
+              });
+              if (featuresSection) {
+                if (feats.length) {
+                  featuresSection.removeAttribute("hidden");
+                  featuresSection.setAttribute("aria-hidden", "false");
+                  featList.removeAttribute("hidden");
+                  if (featuresHeading)
+                    featuresHeading.removeAttribute("hidden");
+                } else {
+                  featuresSection.setAttribute("hidden", "");
+                  featuresSection.setAttribute("aria-hidden", "true");
+                  featList.setAttribute("hidden", "");
+                  if (featuresHeading)
+                    featuresHeading.setAttribute("hidden", "");
+                }
+              }
             }
 
-            modal.removeAttribute('hidden')
-            modal.setAttribute('aria-hidden', 'false')
-            if (closeBtn && typeof closeBtn.focus === 'function') closeBtn.focus()
-            document.addEventListener('keydown', onKeydown)
+            modal.removeAttribute("hidden");
+            modal.setAttribute("aria-hidden", "false");
+            if (closeBtn && typeof closeBtn.focus === "function")
+              closeBtn.focus();
+            document.addEventListener("keydown", onKeydown);
           }
 
           function closeModal() {
             // closing animation
-            modal.classList.add('project-modal--closing')
-            modal.removeAttribute('aria-hidden')
-            setTimeout(()=>{
-              modal.setAttribute('hidden', '')
-              modal.setAttribute('aria-hidden', 'true')
-              modal.classList.remove('project-modal--closing')
-              if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus()
-            }, 260)
-            document.removeEventListener('keydown', onKeydown)
+            modal.classList.add("project-modal--closing");
+            modal.removeAttribute("aria-hidden");
+            setTimeout(() => {
+              modal.setAttribute("hidden", "");
+              modal.setAttribute("aria-hidden", "true");
+              modal.classList.remove("project-modal--closing");
+              if (lastFocused && typeof lastFocused.focus === "function")
+                lastFocused.focus();
+            }, 260);
+            document.removeEventListener("keydown", onKeydown);
           }
 
-          if (overlay) overlay.addEventListener('click', closeModal)
-          if (closeBtn) closeBtn.addEventListener('click', closeModal)
+          if (overlay) overlay.addEventListener("click", closeModal);
+          if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
-          const moreBtns = document.querySelectorAll('.project-card__more')
+          const moreBtns = document.querySelectorAll(".project-card__more");
           if (!moreBtns || moreBtns.length === 0) {
-            console.warn('No "More details" buttons found')
-            return
+            console.warn('No "More details" buttons found');
+            return;
           }
 
           moreBtns.forEach((btn) => {
-            try { btn.style.cursor = 'pointer' } catch (e) {}
-            btn.addEventListener('click', (e) => {
-              e.preventDefault()
-              const card = btn.closest('.project-card')
-              if (!card) return
-              openModalFromCardElement(card)
-            })
-          })
-
-          const thumbsEl = modal.querySelector('.carousel__thumbs')
-
-          // carousel state for currently open project's images
-          let modalImages = []
-          let modalSlideIndex = 0
-          let isScrubbing = false
+            try {
+              btn.style.cursor = "pointer";
+            } catch (e) {}
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              const card = btn.closest(".project-card");
+              if (!card) return;
+              openModalFromCardElement(card);
+            });
+          });
 
           function normalizeImageSrc(value) {
-            if (!value) return ''
-            const raw = typeof value === 'string'
-              ? value.trim()
-              : (value && typeof value.url === 'string' ? value.url.trim() : String(value).trim())
-            if (!raw) return ''
-            if (/^(https?:|data:|blob:)/i.test(raw)) return raw
-            const sanitized = raw.replace(/ /g, '%20')
+            if (!value) return "";
+            const raw =
+              typeof value === "string"
+                ? value.trim()
+                : value && typeof value.url === "string"
+                ? value.url.trim()
+                : String(value).trim();
+            if (!raw) return "";
+            if (/^(https?:|data:|blob:)/i.test(raw)) return raw;
+            const sanitized = raw.replace(/ /g, "%20");
             try {
-              const url = new URL(sanitized, window.location.href)
-              return url.href
+              const url = new URL(sanitized, window.location.href);
+              return url.href;
             } catch (err) {
-              return sanitized
+              return sanitized;
             }
           }
 
-          function toggleControl(control, disabled){
-            if(!control) return
-            control.disabled = disabled
-            control.classList.toggle('carousel__control--inactive', disabled)
-            if(disabled){
-              control.setAttribute('aria-hidden', 'true')
-              control.setAttribute('tabindex', '-1')
+          function toggleControl(control, disabled) {
+            if (!control) return;
+            control.disabled = disabled;
+            if (disabled) {
+              control.setAttribute("aria-hidden", "true");
             } else {
-              control.removeAttribute('aria-hidden')
-              control.setAttribute('tabindex', '0')
+              control.removeAttribute("aria-hidden");
             }
           }
 
-          function updateControls(){
-            const total = Array.isArray(modalImages) ? modalImages.length : 0
-            const interactive = total > 1
-            toggleControl(prevBtn, !interactive)
-            toggleControl(nextBtn, !interactive)
-          }
-
-          function updateProgressAria(){
-            if(!progressTrack) return
-            const total = Array.isArray(modalImages) ? modalImages.length : 0
-            const isInteractive = total > 1
-            if(!isInteractive) isScrubbing = false
-            progressTrack.classList.toggle('is-disabled', !isInteractive)
-            if(isInteractive){
-              progressTrack.setAttribute('aria-valuemin', '1')
-              progressTrack.setAttribute('aria-valuemax', String(total))
-              progressTrack.setAttribute('aria-valuenow', String(modalSlideIndex + 1))
-              progressTrack.setAttribute('aria-valuetext', `Slide ${modalSlideIndex + 1} of ${total}`)
-              progressTrack.removeAttribute('aria-disabled')
-              progressTrack.setAttribute('tabindex', '0')
-            } else {
-              progressTrack.setAttribute('aria-valuemin', '0')
-              progressTrack.setAttribute('aria-valuemax', '0')
-              progressTrack.setAttribute('aria-valuenow', '0')
-              progressTrack.removeAttribute('aria-valuetext')
-              progressTrack.setAttribute('aria-disabled', 'true')
-              progressTrack.setAttribute('tabindex', '-1')
-            }
-          }
-
-          function handleProgressScrub(clientX){
-            if(!progressTrack || !modalImages || modalImages.length < 2) return
-            const rect = progressTrack.getBoundingClientRect()
-            if(!rect || !rect.width) return
-            const ratio = (clientX - rect.left) / rect.width
-            const bounded = Math.min(Math.max(ratio, 0), 0.999999)
-            const nextIndex = Math.min(modalImages.length - 1, Math.max(0, Math.floor(bounded * modalImages.length)))
-            if(nextIndex !== modalSlideIndex) setSlide(nextIndex)
-          }
-
-          function finishScrub(e){
-            if(!isScrubbing) return
-            if(e && typeof e.clientX === 'number') handleProgressScrub(e.clientX)
-            isScrubbing = false
-            if(progressTrack && progressTrack.releasePointerCapture && e && typeof e.pointerId !== 'undefined'){
-              try { progressTrack.releasePointerCapture(e.pointerId) } catch(_){}
-            }
-          }
-
-          if(progressTrack){
-            progressTrack.addEventListener('pointerdown', (e)=>{
-              if(!modalImages || modalImages.length < 2) return
-              isScrubbing = true
-              if(progressTrack.setPointerCapture){
-                try { progressTrack.setPointerCapture(e.pointerId) } catch(_){}
+          function updateControls() {
+            const total = Array.isArray(modalImages) ? modalImages.length : 0;
+            const interactive = total > 1;
+            toggleControl(prevBtn, !interactive);
+            toggleControl(nextBtn, !interactive);
+            if (indicatorsContainer) {
+              if (interactive) {
+                indicatorsContainer.removeAttribute("hidden");
+              } else {
+                indicatorsContainer.setAttribute("hidden", "");
               }
-              handleProgressScrub(e.clientX)
-              if(typeof progressTrack.focus === 'function'){
-                try { progressTrack.focus() } catch(_){}
-              }
-              e.preventDefault()
-            })
-            progressTrack.addEventListener('pointermove', (e)=>{
-              if(!isScrubbing) return
-              handleProgressScrub(e.clientX)
-            })
-            progressTrack.addEventListener('pointerup', finishScrub)
-            progressTrack.addEventListener('pointercancel', finishScrub)
-            progressTrack.addEventListener('pointerleave', (e)=>{
-              if(!isScrubbing) return
-              finishScrub(e)
-            })
-            progressTrack.addEventListener('click', (e)=>{
-              if(isScrubbing) return
-              handleProgressScrub(e.clientX)
-            })
-            progressTrack.addEventListener('keydown', (e)=>{
-              if(!modalImages || modalImages.length === 0) return
-              if(e.key === 'ArrowRight' || e.key === 'ArrowDown'){
-                e.preventDefault()
-                setSlide(modalSlideIndex + 1)
-              } else if(e.key === 'ArrowLeft' || e.key === 'ArrowUp'){
-                e.preventDefault()
-                setSlide(modalSlideIndex - 1)
-              } else if(e.key === 'Home'){
-                e.preventDefault()
-                setSlide(0)
-              } else if(e.key === 'End'){
-                e.preventDefault()
-                setSlide(modalImages.length - 1)
-              }
-            })
+            }
           }
 
-          updateProgressAria()
-          updateControls()
+          function renderSlides() {
+            if (!slidesContainer) return;
+            const slides = slidesContainer.querySelectorAll(
+              ".project-carousel__slide"
+            );
+            slides.forEach((slide, idx) => {
+              const isActive = idx === modalSlideIndex;
+              slide.classList.toggle("is-active", isActive);
+              slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+            });
+          }
 
-          function buildCarouselThumbs(){
-            if(!thumbsEl) return
-            thumbsEl.innerHTML = ''
-            thumbsEl.scrollLeft = 0
-            if(progressFill) progressFill.style.width = '0%'
-            if(!modalImages || modalImages.length === 0) {
-              updateProgressAria()
-              updateControls()
-              return
+          function renderIndicators() {
+            if (!indicatorsContainer) return;
+            const indicators = indicatorsContainer.querySelectorAll(
+              ".project-carousel__indicator"
+            );
+            indicators.forEach((indicator, idx) => {
+              const isActive = idx === modalSlideIndex;
+              indicator.classList.toggle("is-active", isActive);
+              indicator.setAttribute(
+                "aria-pressed",
+                isActive ? "true" : "false"
+              );
+            });
+          }
+
+          function setSlide(nextIndex) {
+            if (!modalImages || !modalImages.length) return;
+            if (nextIndex < 0) nextIndex = modalImages.length - 1;
+            if (nextIndex >= modalImages.length) nextIndex = 0;
+            modalSlideIndex = nextIndex;
+            renderSlides();
+            renderIndicators();
+            updateControls();
+          }
+
+          function buildCarousel(titleText) {
+            if (slidesContainer) slidesContainer.innerHTML = "";
+            if (indicatorsContainer) indicatorsContainer.innerHTML = "";
+
+            if (!modalImages || modalImages.length === 0) {
+              if (slidesContainer) {
+                const placeholderSlide = document.createElement("div");
+                placeholderSlide.className =
+                  "project-carousel__slide is-active";
+                placeholderSlide.setAttribute("aria-hidden", "false");
+                const placeholder = document.createElement("div");
+                placeholder.className = "project-carousel__placeholder";
+                placeholder.textContent = "Screenshots coming soon.";
+                placeholderSlide.appendChild(placeholder);
+                slidesContainer.appendChild(placeholderSlide);
+              }
+              if (indicatorsContainer) indicatorsContainer.innerHTML = "";
+              updateControls();
+              return;
             }
+
+            const total = modalImages.length;
             modalImages.forEach((url, index) => {
-              const btn = document.createElement('button')
-              btn.type = 'button'
-              btn.className = 'carousel__thumb'
-              btn.dataset.slideIndex = String(index)
-              if(index === modalSlideIndex) btn.classList.add('is-active')
-              btn.setAttribute('aria-pressed', index === modalSlideIndex ? 'true' : 'false')
-              const img = document.createElement('img')
-              img.src = url
-              img.alt = `Project screenshot ${index + 1}`
-              btn.appendChild(img)
-              btn.addEventListener('click', ()=> setSlide(index))
-              thumbsEl.appendChild(btn)
-            })
-            updateProgressAria()
-            updateControls()
-          }
+              if (slidesContainer) {
+                const slide = document.createElement("div");
+                slide.className = "project-carousel__slide";
+                slide.setAttribute("role", "group");
+                slide.setAttribute("aria-roledescription", "slide");
+                slide.setAttribute(
+                  "aria-label",
+                  `Slide ${index + 1} of ${total}`
+                );
+                const img = document.createElement("img");
+                img.src = url;
+                img.alt = `${titleText || "Project"} screenshot ${index + 1}`;
+                slide.appendChild(img);
+                slidesContainer.appendChild(slide);
+              }
 
-          function setSlide(i){
-            if(!modalImages || modalImages.length===0) return
-            if(i<0) i = modalImages.length-1
-            if(i>=modalImages.length) i = 0
-            modalSlideIndex = i
-            if (imgEl) {
-              imgEl.src = modalImages[modalSlideIndex]
-              imgEl.alt = `Project screenshot ${modalSlideIndex + 1}`
-            }
-            if(thumbsEl) {
-              Array.from(thumbsEl.children).forEach((btn)=> {
-                const hasIndex = btn.dataset && typeof btn.dataset.slideIndex !== 'undefined'
-                if (!hasIndex) {
-                  btn.classList.remove('is-active')
-                  btn.removeAttribute('aria-pressed')
-                  return
-                }
-                const idx = Number(btn.dataset.slideIndex || '0')
-                const isActive = idx===modalSlideIndex
-                btn.classList.toggle('is-active', isActive)
-                btn.setAttribute('aria-pressed', isActive ? 'true' : 'false')
-                if (isActive && typeof btn.scrollIntoView === 'function') {
-                  try {
-                    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
-                  } catch (scrollErr) {
-                    /* ignore */
+              if (indicatorsContainer) {
+                const indicator = document.createElement("button");
+                indicator.type = "button";
+                indicator.className = "project-carousel__indicator";
+                indicator.setAttribute(
+                  "aria-label",
+                  `Go to slide ${index + 1}`
+                );
+                indicator.setAttribute("data-slide-index", String(index));
+                indicator.addEventListener("click", () => setSlide(index));
+                indicator.addEventListener("keydown", (event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setSlide(index);
                   }
-                }
-              })
-            }
-            if(progressFill) {
-              const percent = modalImages.length ? ((modalSlideIndex + 1) / modalImages.length) * 100 : 0
-              progressFill.style.width = `${percent}%`
-            }
-            updateProgressAria()
-            updateControls()
+                });
+                indicatorsContainer.appendChild(indicator);
+              }
+            });
+
+            modalSlideIndex = 0;
+            setSlide(0);
           }
 
-          function openModalFromCardElement(card){
+          if (prevBtn) {
+            prevBtn.addEventListener("click", (event) => {
+              event.preventDefault();
+              setSlide(modalSlideIndex - 1);
+            });
+          }
+
+          if (nextBtn) {
+            nextBtn.addEventListener("click", (event) => {
+              event.preventDefault();
+              setSlide(modalSlideIndex + 1);
+            });
+          }
+
+          function openModalFromCardElement(card) {
             // reuse existing open flow for a single project card
-            openModalFromCard(card)
+            openModalFromCard(card);
             // prepare carousel images: read data-screens (JSON array or pipe/comma-separated) or fallback to single image
-            modalImages = []
-            modalSlideIndex = 0
-            try{
+            modalImages = [];
+            modalSlideIndex = 0;
+            try {
               if (card.dataset && card.dataset.screens) {
-                const raw = card.dataset.screens
-                try { modalImages = JSON.parse(raw) } catch(e){
+                const raw = card.dataset.screens;
+                try {
+                  modalImages = JSON.parse(raw);
+                } catch (e) {
                   // try pipe or comma
-                  modalImages = raw.split(/\||,/) .map(s=>s.trim()).filter(Boolean)
+                  modalImages = raw
+                    .split(/\||,/)
+                    .map((s) => s.trim())
+                    .filter(Boolean);
                 }
               }
-            }catch(e){ modalImages = [] }
+            } catch (e) {
+              modalImages = [];
+            }
             // fallback to the card image if no screens provided
-            if (!modalImages || modalImages.length===0){
-              const img = card.querySelector('.project-card__img')
-              if (img && img.src) modalImages = [img.src]
+            if (!modalImages || modalImages.length === 0) {
+              const img = card.querySelector(".project-card__img");
+              if (img && img.src) modalImages = [img.src];
             }
             modalImages = Array.isArray(modalImages)
               ? modalImages.map(normalizeImageSrc).filter(Boolean)
-              : []
-            // set initial slide
-            buildCarouselThumbs()
-            if (!modalImages || modalImages.length === 0) {
-              if (imgEl) {
-                imgEl.removeAttribute('src')
-                imgEl.alt = 'Project screenshot coming soon'
-              }
-              if (progressFill) progressFill.style.width = '0%'
-              updateControls()
-            } else {
-              setSlide(0)
-            }
+              : [];
+            modalSlideIndex = 0;
+
+            buildCarousel(titleEl ? titleEl.textContent : "Project");
             // links are already cloned into the modal's links container; no separate github/see-full buttons
           }
           // Decorate existing chips with color classes (fallback)
-          ;(function decorateChips() {
+          (function decorateChips() {
             function pickClass(name) {
-              if (!name) return 'chip-default'
-              const n = name.toLowerCase()
-              if (n.indexOf('react') !== -1) return 'chip-react'
-              if (n.indexOf('angular') !== -1) return 'chip-angular'
-              if (n.indexOf('node') !== -1) return 'chip-node'
-              if (n.indexOf('docker') !== -1) return 'chip-docker'
-              if (n.indexOf('spring') !== -1) return 'chip-spring'
-              if (n.indexOf('java') !== -1) return 'chip-java'
-              if (n.indexOf('mysql') !== -1) return 'chip-mysql'
-              if (n.indexOf('post') !== -1) return 'chip-postgres'
-              if (n.indexOf('grafana') !== -1) return 'chip-grafana'
-              if (n.indexOf('prometheus') !== -1) return 'chip-prometheus'
-              if (n.indexOf('ci') !== -1 || n.indexOf('cicd') !== -1) return 'chip-cicd'
-              if (n.indexOf('type') !== -1 || n === 'ts') return 'chip-ts'
-              return 'chip-default'
+              if (!name) return "chip-default";
+              const n = name.toLowerCase();
+              if (n.indexOf("react") !== -1) return "chip-react";
+              if (n.indexOf("angular") !== -1) return "chip-angular";
+              if (n.indexOf("node") !== -1) return "chip-node";
+              if (n.indexOf("docker") !== -1) return "chip-docker";
+              if (n.indexOf("spring") !== -1) return "chip-spring";
+              if (n.indexOf("java") !== -1) return "chip-java";
+              if (n.indexOf("mysql") !== -1) return "chip-mysql";
+              if (n.indexOf("post") !== -1) return "chip-postgres";
+              if (n.indexOf("grafana") !== -1) return "chip-grafana";
+              if (n.indexOf("prometheus") !== -1) return "chip-prometheus";
+              if (n.indexOf("ci") !== -1 || n.indexOf("cicd") !== -1)
+                return "chip-cicd";
+              if (n.indexOf("type") !== -1 || n === "ts") return "chip-ts";
+              return "chip-default";
             }
 
-            document.querySelectorAll('.tech-chip').forEach((el) => {
+            document.querySelectorAll(".tech-chip").forEach((el) => {
               try {
-                const txt = (el.textContent || el.innerText || '').trim()
-                const cls = pickClass(txt)
-                if (cls && !el.classList.contains(cls)) el.classList.add(cls)
+                const txt = (el.textContent || el.innerText || "").trim();
+                const cls = pickClass(txt);
+                if (cls && !el.classList.contains(cls)) el.classList.add(cls);
               } catch (e) {
                 /* ignore */
               }
-            })
-          })()
+            });
+          })();
           // Tech chip tooltips and subtle hover interactions
-          ;(function wireTechTooltips(){
-            try{
-              const tooltip = document.createElement('div')
-              tooltip.className = 'tech-tooltip'
-              document.body.appendChild(tooltip)
+          (function wireTechTooltips() {
+            try {
+              const tooltip = document.createElement("div");
+              tooltip.className = "tech-tooltip";
+              document.body.appendChild(tooltip);
               const map = {
-                'React': 'React — frontend library used for UI components',
-                'Angular': 'Angular — frontend framework used for structured apps',
-                'Node.js': 'Node.js — backend runtime for server-side JavaScript',
-                'Docker': 'Docker — containerization used for deployments',
-                'Spring Boot': 'Spring Boot — Java backend framework',
-                'Java': 'Java — backend language used in microservices',
-                'Postgres': 'Postgres — relational database',
-                'Prometheus': 'Prometheus — monitoring and metrics',
-                'Microservices': 'Microservices — distributed service architecture',
-                'Grafana': 'Grafana — visualization and dashboards'
+                React: "React — frontend library used for UI components",
+                Angular:
+                  "Angular — frontend framework used for structured apps",
+                "Node.js":
+                  "Node.js — backend runtime for server-side JavaScript",
+                Docker: "Docker — containerization used for deployments",
+                "Spring Boot": "Spring Boot — Java backend framework",
+                Java: "Java — backend language used in microservices",
+                Postgres: "Postgres — relational database",
+                Prometheus: "Prometheus — monitoring and metrics",
+                Microservices:
+                  "Microservices — distributed service architecture",
+                Grafana: "Grafana — visualization and dashboards",
+              };
+              function show(e, text) {
+                tooltip.textContent = text;
+                tooltip.style.opacity = "1";
+                tooltip.style.left = e.pageX + 12 + "px";
+                tooltip.style.top = e.pageY + 12 + "px";
+                tooltip.style.transform = "translateY(0)";
               }
-              function show(e, text){ tooltip.textContent = text; tooltip.style.opacity = '1'; tooltip.style.left = (e.pageX + 12) + 'px'; tooltip.style.top = (e.pageY + 12) + 'px'; tooltip.style.transform = 'translateY(0)'; }
-              function hide(){ tooltip.style.opacity = '0'; tooltip.style.transform = 'translateY(-6px)'; }
-              document.querySelectorAll('.tech-chip').forEach(ch => {
-                ch.addEventListener('mouseenter', (ev)=>{ const txt = (ch.textContent||'').trim(); const tip = map[txt] || `${txt} — technology`; show(ev, tip); });
-                ch.addEventListener('mousemove', (ev)=>{ tooltip.style.left = (ev.pageX + 12) + 'px'; tooltip.style.top = (ev.pageY + 12) + 'px'; });
-                ch.addEventListener('mouseleave', ()=>{ hide(); });
-              })
-            }catch(e){/* ignore */}
-          })()
+              function hide() {
+                tooltip.style.opacity = "0";
+                tooltip.style.transform = "translateY(-6px)";
+              }
+              document.querySelectorAll(".tech-chip").forEach((ch) => {
+                ch.addEventListener("mouseenter", (ev) => {
+                  const txt = (ch.textContent || "").trim();
+                  const tip = map[txt] || `${txt} — technology`;
+                  show(ev, tip);
+                });
+                ch.addEventListener("mousemove", (ev) => {
+                  tooltip.style.left = ev.pageX + 12 + "px";
+                  tooltip.style.top = ev.pageY + 12 + "px";
+                });
+                ch.addEventListener("mouseleave", () => {
+                  hide();
+                });
+              });
+            } catch (e) {
+              /* ignore */
+            }
+          })();
         } catch (err) {
-          console.error('Modal initializer error', err)
+          console.error("Modal initializer error", err);
         }
-      })()
+      })();
     </script>
     <script>
       // Force inline chip styles to bypass any CSS caching/specificity issues.
-      (function(){
-        try{
-          const chips = document.querySelectorAll('.tech-chip')
-          if(!chips || chips.length===0) return
-          const bg = 'rgba(37,99,235,0.22)'
-          const color = 'rgba(6,40,89,0.96)'
-          const borderColor = 'rgba(37,99,235,0.28)'
-          chips.forEach(ch => {
+      (function () {
+        try {
+          const chips = document.querySelectorAll(".tech-chip");
+          if (!chips || chips.length === 0) return;
+          const bg = "rgba(37,99,235,0.22)";
+          const color = "rgba(6,40,89,0.96)";
+          const borderColor = "rgba(37,99,235,0.28)";
+          chips.forEach((ch) => {
             // use setProperty with priority 'important' so this wins over other styles
-            ch.style.setProperty('background', bg, 'important')
-            ch.style.setProperty('color', color, 'important')
-            ch.style.setProperty('border', `1px solid ${borderColor}`, 'important')
-            ch.style.setProperty('transition', 'all 120ms ease', 'important')
-          })
-        }catch(e){console.error('chip inline style error',e)}
-      })()
+            ch.style.setProperty("background", bg, "important");
+            ch.style.setProperty("color", color, "important");
+            ch.style.setProperty(
+              "border",
+              `1px solid ${borderColor}`,
+              "important"
+            );
+            ch.style.setProperty("transition", "all 120ms ease", "important");
+          });
+        } catch (e) {
+          console.error("chip inline style error", e);
+        }
+      })();
     </script>
   </body>
 </html>
